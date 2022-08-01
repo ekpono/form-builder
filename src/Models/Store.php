@@ -22,20 +22,6 @@ class Store extends Model
 
     protected $casts = ['settings' => 'array'];
 
-    protected $dispatchesEvents = [
-        'created' => StoreCreated::class,
-    ];
-
-    public function workspace()
-    {
-        return $this->belongsTo(Workspace::class);
-    }
-
-    public function identity(): \Illuminate\Database\Eloquent\Relations\BelongsTo
-    {
-        return $this->belongsTo(Identity::class);
-    }
-
     public function orders()
     {
         return $this->hasMany(Store::class);

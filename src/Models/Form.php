@@ -2,6 +2,7 @@
 
 namespace Shopceed\FormBuilder\Models;
 
+use Shopceed\FormBuilder\Helpers\FormBuilderHelper;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -17,14 +18,12 @@ class Form extends Model
 
     const TYPE_COMPANY = 'company';
 
-    const CAT_PRE_REVIEW = 'pre_review';
+    public static function boot()
+    {
+        parent::boot();
 
-    const CAT_REVIEW = 'review';
-
-    const CAT_REVIEW_FOLLOW_UP = 'review_follow_up';
-
-    const CAT_POST_REVIEW_FOLLOW_UP = 'post_review_follow_up';
-
+        self::creating(FormBuilderHelper::onCreated());
+    }
     public function store()
     {
         return $this->belongsTo(config('ramaroo.store_model'));
