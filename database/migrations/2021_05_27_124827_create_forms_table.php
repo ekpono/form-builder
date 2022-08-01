@@ -23,7 +23,7 @@ class CreateFormsTable extends Migration
             $table->string('category');
             $table->json('data');
             $table->string('google_sheet_id')->nullable();
-            $table->uuid();
+            $table->uuid()->nullable();
             $table->jsonb('snapshot')->nullable();
             $table->timestamps();
             $table->softDeletes();
