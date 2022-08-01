@@ -14,7 +14,9 @@ class CreateFormsTable extends Migration
      */
     public function up()
     {
-        DB::statement('CREATE EXTENSION IF NOT EXISTS "uuid-ossp";');
+        // This throws an error on mysql
+//        DB::statement('CREATE EXTENSION IF NOT EXISTS "uuid-ossp";');
+
         Schema::create('forms', function (Blueprint $table) {
             $table->id();
             $table->foreignId('store_id')->constrained();
