@@ -14,9 +14,6 @@ class CreateFormsTable extends Migration
      */
     public function up()
     {
-        // This throws an error on mysql
-//        DB::statement('CREATE EXTENSION IF NOT EXISTS "uuid-ossp";');
-
         Schema::create('forms', function (Blueprint $table) {
             $table->id();
             $table->foreignId('store_id')->constrained();
@@ -26,7 +23,7 @@ class CreateFormsTable extends Migration
             $table->string('category');
             $table->json('data');
             $table->string('google_sheet_id')->nullable();
-            $table->uuid('uuid')->default(DB::raw('uuid_generate_v4()'));
+            $table->uuid('uuid')->default(DB::raw('(UUID())'));
             $table->jsonb('snapshot')->nullable();
             $table->timestamps();
             $table->softDeletes();
