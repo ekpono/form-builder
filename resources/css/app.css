@@ -1,0 +1,19 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+[contenteditable=true] {
+    outline: none;
+    white-space: pre-wrap;
+}
+
+[contenteditable=true]:empty:before{
+    content: attr(placeholder);
+    pointer-events: none;
+    display: block; /* For Firefox */
+    opacity: .25;
+}
+
+.bee-chrome-colorPicker .inputs-controls {
+    display: none;
+}

@@ -1,0 +1,69 @@
+{
+    "name": "ramaroo-builder",
+    "private": false,
+    "version": "0.1.32",
+    "main": "./dist/ramaroo-builder.umd.js",
+    "module": "./dist/ramaroo-builder.es.js",
+    "exports": {
+        ".": {
+            "import": "./dist/ramaroo-builder.es.js",
+            "require": "./dist/ramaroo-builder.umd.js"
+        },
+        "./dist/style.css": "./dist/style.css"
+    },
+    "files": [
+        "dist",
+        "src"
+    ],
+    "scripts": {
+        "dev-vite": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production"
+    },
+    "dependencies": {
+        "vue": "^3.0.5"
+    },
+    "devDependencies": {
+        "@headlessui/vue": "^1.5.0",
+        "@heroicons/vue": "^1.0.6",
+        "@inertiajs/inertia": "^0.11.0",
+        "@inertiajs/inertia-vue3": "^0.6.0",
+        "@inertiajs/progress": "^0.2.7",
+        "@tailwindcss/aspect-ratio": "^0.4.0",
+        "@tailwindcss/forms": "^0.5.0",
+        "@tailwindcss/line-clamp": "^0.3.1",
+        "@tailwindcss/typography": "^0.5.2",
+        "@vitejs/plugin-vue": "^2.3.3",
+        "@vue/compiler-sfc": "^3.2.32",
+        "autoprefixer": "^10.4.4",
+        "axios": "^0.25.0",
+        "babel-eslint": "^10.1.0",
+        "click-outside-vue3": "^4.0.1",
+        "eslint": "^7.32.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-config-standard": "^16.0.3",
+        "eslint-plugin-vue": "^8.6.0",
+        "laravel-mix": "^6.0.6",
+        "laravel-vapor": "^0.5.1",
+        "lodash": "^4.17.19",
+        "moment": "^2.29.3",
+        "postcss": "^8.1.14",
+        "postcss-cli": "^9.1.0",
+        "postcss-import": "^14.1.0",
+        "prettier": "^2.6.2",
+        "standard": "^16.0.4",
+        "tailwindcss": "^3.0.24",
+        "vite": "^2.9.9",
+        "vue-draggable-next": "^2.1.1",
+        "vue-loader": "^17.0.0",
+        "vue3-colorpicker": "^2.0.4",
+        "vuemoji-picker": "^0.0.7"
+    }
+}
