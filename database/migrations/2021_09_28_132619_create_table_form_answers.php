@@ -14,7 +14,7 @@ class CreateTableFormAnswers extends Migration
     public function up()
     {
         Schema::create('form_answers', function (Blueprint $table) {
-            $table->uuid()->unique();
+            $table->uuid()->unique()->index();
             $table->foreignUuid('form_uuid')->references('uuid')->on('forms');
             $table->foreignUuid('order_uuid')->references('uuid')->on('orders');
             $table->jsonb('answers');

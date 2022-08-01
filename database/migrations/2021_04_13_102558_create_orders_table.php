@@ -15,6 +15,7 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
+            $table->uuid()->index();
             $table->unsignedBigInteger('store_id');
             $table->string('external_id');
             $table->string('status')->default(Shopceed\FormBuilder\Models\Order::STATUS_NEW);
