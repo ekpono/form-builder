@@ -17,7 +17,7 @@ class CreateOrdersTable extends Migration
             $table->id();
             $table->unsignedBigInteger('store_id');
             $table->string('external_id');
-            $table->string('status')->default(\App\Models\Order::STATUS_NEW);
+            $table->string('status')->default(Shopceed\FormBuilder\Models\Order::STATUS_NEW);
             $table->jsonb('limits')->default(json_encode([
                 'system' => 5,
                 'order' => 3,
