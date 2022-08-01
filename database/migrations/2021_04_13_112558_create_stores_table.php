@@ -23,9 +23,7 @@ class CreateStoresTable extends Migration
             $table->string('domain');
             $table->string('currency_code')->nullable();
             $table->boolean('has_sms')->default(0);
-            $table->jsonb('settings')->default(json_encode([
-                'unsubscribe_from_all_channels' => true,
-            ]));
+            $table->jsonb('settings')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
