@@ -11,12 +11,7 @@
     "require": {
         "php": "^7.4|^8.0|^8.1",
         "inertiajs/inertia-laravel": "^0.5.0",
-        "laravel/scout": "^9.4",
-        "laravel/socialite": "^5.5",
-        "laravel/vapor-core": "^2.21",
-        "meilisearch/meilisearch-php": "^0.23.2",
         "mustache/mustache": "^2.14",
-        "socialiteproviders/shopify": "^4.1",
         "tightenco/ziggy": "^1.4"
     },
     "require-dev": {

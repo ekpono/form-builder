@@ -3,7 +3,6 @@ import { createInertiaApp } from '@inertiajs/inertia-vue3'
 import { InertiaProgress } from '@inertiajs/progress'
 
 require('./bootstrap')
-window.Vapor = require('laravel-vapor')
 
 const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Ramaroo'
 const route = window.route
