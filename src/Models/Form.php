@@ -32,12 +32,12 @@ class Form extends Model
     }
     public function store()
     {
-        return $this->belongsTo(config('ramaroo.store_model'));
+        return $this->belongsTo(config('form-builder.store_model'));
     }
 
     public function user()
     {
-        return $this->belongsTo(config('ramaroo.user_model'));
+        return $this->belongsTo(config('form-builder.user_model'));
     }
 
     public static function getTypes(): array
