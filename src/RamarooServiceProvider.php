@@ -17,29 +17,23 @@ class RamarooServiceProvider extends ServiceProvider
         /*
          * Optional methods to load your package assets
          */
-        $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'ramaroo');
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'ramaroo');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'form-builder');
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/form-builder.php' => config_path('ramaroo.php'),
-            ], 'ramaroo-config');
+                __DIR__.'/../config/form-builder.php' => config_path('form-builder.php'),
+            ], 'form-builder-config');
 
             // Publishing the views.
             $this->publishes([
-                __DIR__.'/../resources/views' => resource_path('views/vendor/ramaroo'),
-            ], 'ramaroo-views');
+                __DIR__.'/../resources/views' => resource_path('views/vendor/form-builder'),
+            ], 'form-builder-views');
 
             // Publishing assets.
             $this->publishes([
-                __DIR__.'/../public' => public_path('vendor/ramaroo'),
-            ], 'ramaroo-assets');
-
-            // Publishing the translation files.
-            $this->publishes([
-                __DIR__.'/../resources/lang' => resource_path('lang/vendor/ramaroo'),
-            ], 'ramaroo-lang');
+                __DIR__.'/../public' => public_path('vendor/form-builder'),
+            ], 'form-builder-assets');
 
             // Registering package commands.
             $this->commands([
@@ -57,22 +51,22 @@ class RamarooServiceProvider extends ServiceProvider
     public function register()
     {
         // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__.'/../config/form-builder.php', 'ramaroo');
+        $this->mergeConfigFrom(__DIR__.'/../config/form-builder.php', 'form-builder');
     }
 
     protected function registerRoutes()
     {
         Route::group([
             'namespace' => 'Shopceed\FormBuilder\Http\Controllers',
-            'middleware' => config('ramaroo.middleware'),
-            'prefix' => 'api/ramaroo',
+            'middleware' => config('form-builder.middleware'),
+            'prefix' => 'api/form-builder',
             'as' => 'api.',
         ], function () {
             $this->loadRoutesFrom(__DIR__.'/../routes/api.php');
         });
         Route::group([
             'namespace' => 'Shopceed\FormBuilder\Http\Controllers',
-            'middleware' => config('ramaroo.middleware'),
+            'middleware' => config('form-builder.middleware'),
         ], function () {
             $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
         });
@@ -82,13 +76,13 @@ class RamarooServiceProvider extends ServiceProvider
     {
         return [
             'namespace' => 'Shopceed\FormBuilder\Http\Controllers',
-            'middleware' => config('ramaroo.middleware'),
+            'middleware' => config('form-builder.middleware'),
         ];
     }
 
     protected function registerPolicies()
     {
-        foreach (config('ramaroo.policies') as $model => $policy) {
+        foreach (config('form-builder.policies') as $model => $policy) {
             Gate::policy($model, $policy);
         }
     }

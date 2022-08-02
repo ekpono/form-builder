@@ -7,9 +7,9 @@ return [
     'path' => env('FORM_BUILDER_URL', 'form-builder'),
     'callback_url' => env('FORM_BUILDER_CALLBACK', env('APP_URL', 'http://localhost')),
     'user_model' => \App\Models\User::class,
-    'store_model' => \App\Models\Store::class,
-    'order_model' => \App\Models\Order::class,
-    'file_model' => \App\Models\File::class,
+    'store_model' => Shopceed\FormBuilder\Models\Store::class,
+    'order_model' => Shopceed\FormBuilder\Models\Order::class,
+    'file_model' => Shopceed\FormBuilder\Models\File::class,
     'middleware' => [
         'web',
         'auth',
