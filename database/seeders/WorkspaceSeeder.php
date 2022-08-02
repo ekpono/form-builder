@@ -1,10 +1,9 @@
 <?php
 
-namespace Database\Seeders;
+namespace Shopceed\FormBuilder\Database\Seeders;
 
 use App\Models\User;
 use Shopceed\FormBuilder\Models\Workspace;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class WorkspaceSeeder extends Seeder

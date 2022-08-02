@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Seeders;
+namespace Shopceed\FormBuilder\Database\Seeders;
 
 use App\Models\Store;
 use Shopceed\FormBuilder\Models\Workspace;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Seeders;
+namespace Shopceed\FormBuilder\Database\Seeders;
 
 use Shopceed\FormBuilder\Models\Identity;
 use App\Models\User;
