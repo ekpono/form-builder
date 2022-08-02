@@ -17,6 +17,5 @@ return [
     ],
     'policies' => [
         \Shopceed\FormBuilder\Models\Form::class => \Shopceed\FormBuilder\Policies\FormPolicy::class,
-        \Shopceed\FormBuilder\Models\Template::class => \Shopceed\FormBuilder\Policies\TemplatePolicy::class,
     ],
 ];
