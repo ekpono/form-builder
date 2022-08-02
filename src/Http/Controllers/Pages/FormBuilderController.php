@@ -3,11 +3,10 @@
 namespace Shopceed\FormBuilder\Http\Controllers\Pages;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Redirect;
 use Shopceed\FormBuilder\Models\File;
 use Shopceed\FormBuilder\Models\Form;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
 
 class FormBuilderController extends Controller
@@ -16,9 +15,8 @@ class FormBuilderController extends Controller
      * Replicate default form and redirect to new form builder page
      *
      * @param  Request  $request
-     * @return RedirectResponse
      */
-    public function index(Request $request): Redirect
+    public function index(Request $request)
     {
         $defaultForm = Form::first();
         $form = $defaultForm->replicate(['id']);
