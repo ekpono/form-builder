@@ -18,7 +18,7 @@ class FormBuilderController extends Controller
      * @param  Request  $request
      * @return RedirectResponse
      */
-    public function index(Request $request)//: \Inertia\Response
+    public function index(Request $request): Redirect
     {
         $defaultForm = Form::first();
         $form = $defaultForm->replicate(['id']);
