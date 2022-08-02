@@ -18,6 +18,12 @@ class Form extends Model
 
     const TYPE_COMPANY = 'company';
 
+    const CAT_PRE_REVIEW = 'pre_review';
+
+    const CAT_REVIEW = 'review';
+
+    const CAT_REVIEW_FOLLOW_UP = 'review_follow_up';
+
     public static function boot()
     {
         parent::boot();
@@ -45,8 +51,8 @@ class Form extends Model
     public static function getCategories(): array
     {
         return [
-            Template::CAT_PRE_REVIEW,
-            Template::CAT_REVIEW,
+            self::CAT_PRE_REVIEW,
+            self::CAT_REVIEW,
             //            TODO: Not implemented on the first stage
             //            Template::CAT_REVIEW_FOLLOW_UP,
             //            Template::CAT_POST_REVIEW_FOLLOW_UP,
