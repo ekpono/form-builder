@@ -3,8 +3,8 @@
 namespace Shopceed\FormBuilder\Http\Controllers\Pages;
 
 use App\Http\Controllers\Controller;
-use App\Models\File;
-use App\Models\Form;
+use Shopceed\FormBuilder\Models\File;
+use Shopceed\FormBuilder\Models\Form;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
