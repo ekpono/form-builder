@@ -15,6 +15,8 @@ class WorkspaceSeeder extends Seeder
      */
     public function run()
     {
+        if (Workspace::count() > 0 ) return;
+        
         Workspace::create([
             "user_id" => User::first()->id,
             "name" => Workspace::DEFAULT_NAME

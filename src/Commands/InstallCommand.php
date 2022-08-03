@@ -11,7 +11,7 @@ class InstallCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'email-builder:install';
+    protected $signature = 'form-builder:install';
 
     /**
      * The console command description.
@@ -27,15 +27,15 @@ class InstallCommand extends Command
      */
     public function handle()
     {
-        $this->comment('Publishing Ramaroo Assets...');
+        $this->comment('Publishing Form Builder Assets...');
         $this->callSilent('vendor:publish', [
-            '--tag' => 'ramaroo-assets',
+            '--tag' => 'form-builder-assets',
             '--force' => true,
         ]);
 
-        $this->comment('Publishing Ramaroo Config...');
+        $this->comment('Publishing Form Builder Config...');
         $this->callSilent('vendor:publish', [
-            '--tag' => 'ramaroo-config',
+            '--tag' => 'form-builder-config',
             '--force' => true,
         ]);
     }

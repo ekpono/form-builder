@@ -15,6 +15,8 @@ class StoreSeeder extends Seeder
      */
     public function run()
     {
+        if ( Store::count() > 0 ) return;
+
         Store::create([
             "workspace_id" => Workspace::first()->id,
             "identity_id" => Workspace::first()->id ,

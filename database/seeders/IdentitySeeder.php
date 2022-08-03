@@ -16,6 +16,8 @@ class IdentitySeeder extends Seeder
      */
     public function run()
     {
+        if ( Identity::count() > 0 ) return;
+
         Identity::create([
             "user_id" => User::first()->id,
             "provider" => "Default Provider",
