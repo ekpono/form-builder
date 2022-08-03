@@ -17,7 +17,7 @@ class RamarooServiceProvider extends ServiceProvider
         /*
          * Optional methods to load your package assets
          */
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'formbuilder');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'form-builder');
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
 
         if ($this->app->runningInConsole()) {
