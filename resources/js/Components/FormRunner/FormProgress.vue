@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { mergeTags, recallInfo } from '@/forms'
+import { mergeTags, recallInfo } from '../../forms'
 import { ArrowNarrowRightIcon } from '@heroicons/vue/outline'
 
 export default {

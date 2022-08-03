@@ -81,17 +81,17 @@ import {
   QUESTION_TYPE_MULTIPLE_CHOICE,
   QUESTION_TYPE_OPEN, QUESTION_TYPE_RATING_SCORE,
   QUESTION_TYPE_YES_NO, QUESTION_CATEGORY_TYP, QUESTION_TYPE_UPLOAD_FILES
-} from '@/constants/Forms/questions'
-import MultipleChoice from '@/Components/FormRunner/MultipleChoice'
-import YesNo from '@/Components/FormRunner/YesNo'
-import Open from '@/Components/FormRunner/Open'
-import RatingScore from '@/Components/FormRunner/RatingScore'
-import TimeDelay from '@/Components/FormRunner/TimeDelay'
-import { FORM_CATEGORY_PRE_REVIEW } from '@/constants/Forms/form'
-import PurchasedItemsChoice from '@/Components/FormRunner/PurchasedItemsChoice'
-import { mergeTags, recallInfo } from '@/forms'
-import ErrorMessage from '@/Components/FormRunner/ErrorMessage'
-import UploadFiles from '@/Components/FormRunner/UploadFiles'
+} from '../../constants/Forms/questions'
+import MultipleChoice from '../../Components/FormRunner/MultipleChoice'
+import YesNo from '../../Components/FormRunner/YesNo'
+import Open from '../../Components/FormRunner/Open'
+import RatingScore from '../../Components/FormRunner/RatingScore'
+import TimeDelay from '../../Components/FormRunner/TimeDelay'
+import { FORM_CATEGORY_PRE_REVIEW } from '../../constants/Forms/form'
+import PurchasedItemsChoice from '../../Components/FormRunner/PurchasedItemsChoice'
+import { mergeTags, recallInfo } from '../../forms'
+import ErrorMessage from '../../Components/FormRunner/ErrorMessage'
+import UploadFiles from '../../Components/FormRunner/UploadFiles'
 import { PhotographIcon } from '@heroicons/vue/solid'
 
 export default {

@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import StopIcon from '@/Components/FormBuilder/Icons/StopIcon'
+import StopIcon from '../../Components/FormBuilder/Icons/StopIcon'
 
 export default {
   name: 'TextFieldMark',

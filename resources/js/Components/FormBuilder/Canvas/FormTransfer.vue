@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import QuestionCard from '@/Components/FormBuilder/Canvas/QuestionCard'
+import QuestionCard from '../../../Components/FormBuilder/Canvas/QuestionCard'
 
 export default {
   name: 'FormTransfer',

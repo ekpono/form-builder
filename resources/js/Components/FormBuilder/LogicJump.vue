@@ -154,13 +154,13 @@
 </template>
 
 <script>
-import SelectBox from '@/Components/SelectBox'
-import JumpIcon from '@/Components/FormBuilder/Icons/JumpIcon'
-import StopIcon from '@/Components/FormBuilder/Icons/StopIcon'
-import { QUESTION_CATEGORY_KICK_OFF, QUESTION_CATEGORY_TYP } from '@/constants/Forms/questions'
-import { updateArrayElement } from '@/functions'
-import LogicJumpCondition from '@/Components/FormBuilder/LogicJumpCondition'
-import { TYPE_LOGIC_JUMP } from '@/constants/Forms/logicJump'
+import SelectBox from '../../Components/SelectBox'
+import JumpIcon from '../../Components/FormBuilder/Icons/JumpIcon'
+import StopIcon from '../../Components/FormBuilder/Icons/StopIcon'
+import { QUESTION_CATEGORY_KICK_OFF, QUESTION_CATEGORY_TYP } from '../../constants/Forms/questions'
+import { updateArrayElement } from '../../functions'
+import LogicJumpCondition from '../../Components/FormBuilder/LogicJumpCondition'
+import { TYPE_LOGIC_JUMP } from '../../constants/Forms/logicJump'
 
 export default {
   name: 'LogicJump',

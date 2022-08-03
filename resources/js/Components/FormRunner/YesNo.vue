@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import ChoiceButton from '@/Components/FormRunner/ChoiceButton'
+import ChoiceButton from '../../Components/FormRunner/ChoiceButton'
 
 export default {
   name: 'YesNo',

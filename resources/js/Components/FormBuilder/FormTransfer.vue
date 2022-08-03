@@ -92,11 +92,11 @@
 </template>
 
 <script>
-import { QUESTION_CATEGORY_KICK_OFF, QUESTION_CATEGORY_TYP } from '@/constants/Forms/questions'
-import { TYPE_FORM_TRANSFER } from '@/constants/Forms/logicJump'
-import SelectBox from '@/Components/SelectBox'
-import LogicJumpCondition from '@/Components/FormBuilder/LogicJumpCondition'
-import { updateArrayElement } from '@/functions'
+import { QUESTION_CATEGORY_KICK_OFF, QUESTION_CATEGORY_TYP } from '../../constants/Forms/questions'
+import { TYPE_FORM_TRANSFER } from '../../constants/Forms/logicJump'
+import SelectBox from '../../Components/SelectBox'
+import LogicJumpCondition from '../../Components/FormBuilder/LogicJumpCondition'
+import { updateArrayElement } from '../../functions'
 
 export default {
   name: 'FormTransfer',

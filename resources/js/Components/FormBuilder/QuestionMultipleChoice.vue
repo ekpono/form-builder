@@ -46,8 +46,8 @@
 <script>
 import { v4 as uuid } from 'uuid'
 import QuestionLabel from './QuestionLabel.vue'
-import StopIcon from '@/Components/FormBuilder/Icons/StopIcon'
-import { injectIntoString, merge, recursivelyGetProp } from '@/functions'
+import StopIcon from '../../Components/FormBuilder/Icons/StopIcon'
+import { injectIntoString, merge, recursivelyGetProp } from '../../functions'
 
 export default {
   name: 'QuestionMultipleChoice',

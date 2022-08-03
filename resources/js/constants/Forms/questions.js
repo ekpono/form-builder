@@ -1,7 +1,7 @@
-import SettingSwitch from '@/Components/FormBuilder/SettingSwitch'
-import SettingCheckboxes from '@/Components/FormBuilder/SettingCheckboxes'
-import SettingInput from '@/Components/FormBuilder/SettingInput'
-import SettingInputNumber from '@/Components/FormBuilder/SettingInputNumber'
+import SettingSwitch from '../../Components/FormBuilder/SettingSwitch'
+import SettingCheckboxes from '../../Components/FormBuilder/SettingCheckboxes'
+import SettingInput from '../../Components/FormBuilder/SettingInput'
+import SettingInputNumber from '../../Components/FormBuilder/SettingInputNumber'
 
 export const QUESTION_CATEGORY_KICK_OFF = 'kick_off'
 export const QUESTION_CATEGORY_FOLLOW_UP = 'follow_up'

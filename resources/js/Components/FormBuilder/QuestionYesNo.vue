@@ -26,7 +26,7 @@
 <script>
 import { v4 as uuid } from 'uuid'
 import QuestionLabel from './QuestionLabel.vue'
-import { injectIntoString, merge, recursivelyGetProp } from '@/functions'
+import { injectIntoString, merge, recursivelyGetProp } from '../../functions'
 
 export default {
   name: 'QuestionYesNo',

@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import MultipleChoice from '@/Components/FormRunner/MultipleChoice'
+import MultipleChoice from '../../Components/FormRunner/MultipleChoice'
 export default {
   name: 'PurchasedItemsChoice',
   components: { MultipleChoice },

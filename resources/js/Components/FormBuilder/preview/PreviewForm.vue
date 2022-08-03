@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import Form from '@/Components/FormRunner/Form'
+import Form from '../../../Components/FormRunner/Form'
 
 export default {
   name: 'PreviewForm',

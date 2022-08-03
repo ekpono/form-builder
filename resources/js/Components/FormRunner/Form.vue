@@ -64,9 +64,9 @@ import {
   QUESTION_CATEGORY_FOLLOW_UP,
   QUESTION_CATEGORY_KICK_OFF, QUESTION_CATEGORY_TYP,
   QUESTION_TYPE_PURCHASED_ITEMS_CHOICE, uploadFilesQuestion
-} from '@/constants/Forms/questions'
-import { FORM_CATEGORY_REVIEW, FORM_TYPE_PRODUCT } from '@/constants/Forms/form'
-import LeftSide from '@/Components/FormRunner/LeftSide'
+} from '../../constants/Forms/questions'
+import { FORM_CATEGORY_REVIEW, FORM_TYPE_PRODUCT } from '../../constants/Forms/form'
+import LeftSide from '../../Components/FormRunner/LeftSide'
 import Question from './Question'
 
 export default {

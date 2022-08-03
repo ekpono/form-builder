@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import Input from '@/Components/Input'
-import SelectBox from '@/Components/SelectBox'
+import Input from '../../Components/Input'
+import SelectBox from '../../Components/SelectBox'
 export default {
   name: 'QuestionTimeDelay',
   components: { SelectBox, Input },

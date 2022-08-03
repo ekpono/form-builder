@@ -96,9 +96,9 @@
 </template>
 
 <script>
-import FlowChart from '@/Components/FormBuilder/Canvas/FlowChart'
-import Question from '@/Components/FormBuilder/Canvas/Question'
-import FormTransfer from '@/Components/FormBuilder/Canvas/FormTransfer'
+import FlowChart from '../../../Components/FormBuilder/Canvas/FlowChart'
+import Question from '../../../Components/FormBuilder/Canvas/Question'
+import FormTransfer from '../../../Components/FormBuilder/Canvas/FormTransfer'
 import {
   QUESTION_CATEGORY_FOLLOW_UP,
   QUESTION_CATEGORY_KICK_OFF,

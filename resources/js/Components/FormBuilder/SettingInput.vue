@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import Input from '@/Components/Input'
+import Input from '../../Components/Input'
 export default {
   name: 'SettingInput',
   components: { Input },

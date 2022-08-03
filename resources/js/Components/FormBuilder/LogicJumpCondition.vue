@@ -94,12 +94,12 @@
 </template>
 
 <script>
-import RadioButton from '@/Components/RadioButton'
-import EditIcon from '@/Components/FormBuilder/Icons/EditIcon'
-import TrashIcon from '@/Components/FormBuilder/Icons/TrashIcon'
-import SelectBox from '@/Components/SelectBox'
-import Input from '@/Components/Input'
-import { QUESTION_TYPE_MULTIPLE_CHOICE, QUESTION_TYPE_YES_NO } from '@/constants/Forms/questions'
+import RadioButton from '../../Components/RadioButton'
+import EditIcon from '../../Components/FormBuilder/Icons/EditIcon'
+import TrashIcon from '../../Components/FormBuilder/Icons/TrashIcon'
+import SelectBox from '../../Components/SelectBox'
+import Input from '../../Components/Input'
+import { QUESTION_TYPE_MULTIPLE_CHOICE, QUESTION_TYPE_YES_NO } from '../../constants/Forms/questions'
 
 export default {
   name: 'LogicJumpCondition',

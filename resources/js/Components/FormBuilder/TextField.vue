@@ -25,9 +25,9 @@
 </template>
 
 <script>
-import { Cursor } from '@/cursor'
-import { injectIntoString } from '@/functions'
-import TextFieldWithMarks from '@/Components/FormBuilder/TextFieldWithMarks'
+import { Cursor } from '../../cursor'
+import { injectIntoString } from '../../functions'
+import TextFieldWithMarks from '../../Components/FormBuilder/TextFieldWithMarks'
 
 export default {
   name: 'TextField',

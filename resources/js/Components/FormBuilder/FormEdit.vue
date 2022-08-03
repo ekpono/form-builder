@@ -76,18 +76,18 @@
 </template>
 
 <script>
-import Input from '@/Components/Input'
-import ActionButtons from '@/Components/FormBuilder/ActionButtons'
-import SelectBox from '@/Components/SelectBox'
+import Input from '../../Components/Input'
+import ActionButtons from '../../Components/FormBuilder/ActionButtons'
+import SelectBox from '../../Components/SelectBox'
 import {
   FORM_CATEGORY_PRE_REVIEW, FORM_CATEGORY_REVIEW,
   FORM_CATEGORY_TITLE, FORM_TYPE_PRODUCT,
   UNAVAILABLE_QUESTIONS_BY_FORM_CATEGORY
-} from '@/constants/Forms/form'
+} from '../../constants/Forms/form'
 import { filterFormQuestions, injectDefaultPreReviewYesNo } from '@/functions'
-import { QUESTION_TYPE_YES_NO } from '@/constants/Forms/questions'
-import { CHANGE_FORM_WARNING_MESSAGE } from '@/constants/Forms/messages'
-import Checkbox from '@/Components/Checkbox'
+import { QUESTION_TYPE_YES_NO } from '../../constants/Forms/questions'
+import { CHANGE_FORM_WARNING_MESSAGE } from '../../constants/Forms/messages'
+import Checkbox from '../../Components/Checkbox'
 
 export default {
   name: 'FormEdit',

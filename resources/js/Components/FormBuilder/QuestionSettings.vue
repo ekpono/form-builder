@@ -59,10 +59,10 @@
 <script>
 import QuestionCategoryAndType from './QuestionCategoryAndType.vue'
 import SettingSwitch from './SettingSwitch.vue'
-import { QUESTION_CATEGORY_KICK_OFF, SETTING_TITLE, SETTINGS } from '@/constants/Forms/questions'
+import { QUESTION_CATEGORY_KICK_OFF, SETTING_TITLE, SETTINGS } from '../../constants/Forms/questions'
 import AddMediaIcon from './Icons/AddMediaIcon.vue'
-import { FORM_CATEGORY_PRE_REVIEW } from '@/constants/Forms/form'
-import TrashIcon from '@/Components/FormBuilder/Icons/TrashIcon'
+import { FORM_CATEGORY_PRE_REVIEW } from '../../constants/Forms/form'
+import TrashIcon from '../../Components/FormBuilder/Icons/TrashIcon'
 
 export default {
   name: 'QuestionSettings',

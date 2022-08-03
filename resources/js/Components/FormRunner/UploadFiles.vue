@@ -54,8 +54,8 @@
 </template>
 
 <script>
-import AddMediaIcon from '@/Components/FormBuilder/Icons/AddMediaIcon'
-import TrashIcon from '@/Components/FormBuilder/Icons/TrashIcon'
+import AddMediaIcon from '../../Components/FormBuilder/Icons/AddMediaIcon'
+import TrashIcon from '../../Components/FormBuilder/Icons/TrashIcon'
 export default {
   name: 'UploadFiles',
   components: { TrashIcon, AddMediaIcon },

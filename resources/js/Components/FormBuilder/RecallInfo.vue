@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import SelectBox from '@/Components/SelectBox'
-import { QUESTION_CATEGORY_KICK_OFF } from '@/constants/Forms/questions'
+import SelectBox from '../../Components/SelectBox'
+import { QUESTION_CATEGORY_KICK_OFF } from '../../constants/Forms/questions'
 
 export default {
   name: 'RecallInfo',

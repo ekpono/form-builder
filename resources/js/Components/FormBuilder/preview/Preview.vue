@@ -53,9 +53,9 @@
 
 <script>
 import { XIcon } from '@heroicons/vue/outline'
-import { PREVIEW_TYPE_FORM, PREVIEW_TYPE_QUESTION } from '@/constants/Forms/form'
-import PreviewQuestion from '@/Components/FormBuilder/preview/PreviewQuestion'
-import PreviewForm from '@/Components/FormBuilder/preview/PreviewForm'
+import { PREVIEW_TYPE_FORM, PREVIEW_TYPE_QUESTION } from '../../../constants/Forms/form'
+import PreviewQuestion from '../../../Components/FormBuilder/preview/PreviewQuestion'
+import PreviewForm from '../../../Components/FormBuilder/preview/PreviewForm'
 
 const DESKTOP_HEIGHT = 800
 const MOBILE_HEIGHT = 812

@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Error from '@/Components/FormBuilder/Error'
+import Error from '../../Components/FormBuilder/Error'
 
 export default {
   name: 'QuestionError',

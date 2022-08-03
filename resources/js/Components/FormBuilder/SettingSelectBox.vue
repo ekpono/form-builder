@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import SelectBox from '@/Components/SelectBox'
+import SelectBox from '../../Components/SelectBox'
 export default {
   name: 'SettingSelectBox',
   components: { SelectBox },

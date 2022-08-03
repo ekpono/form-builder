@@ -156,14 +156,14 @@
 </template>
 
 <script>
-import { QUESTION_CATEGORY_KICK_OFF, QUESTION_CATEGORY_TYP } from '@/constants/Forms/questions'
-import SelectBox from '@/Components/SelectBox'
-import Checkbox from '@/Components/Checkbox'
-import Label from '@/Components/Label'
-import Accordion from '@/Components/Accordion'
-import Input from '@/Components/Input'
+import { QUESTION_CATEGORY_KICK_OFF, QUESTION_CATEGORY_TYP } from '../../constants/Forms/questions'
+import SelectBox from '../../Components/SelectBox'
+import Checkbox from '../../Components/Checkbox'
+import Label from '../../Components/Label'
+import Accordion from '../../Components/Accordion'
+import Input from '../../Components/Input'
 import { PlusIcon } from '@heroicons/vue/solid'
-import StopIcon from '@/Components/FormBuilder/Icons/StopIcon'
+import StopIcon from '../../Components/FormBuilder/Icons/StopIcon'
 
 export default {
   name: 'StoreAnswer',

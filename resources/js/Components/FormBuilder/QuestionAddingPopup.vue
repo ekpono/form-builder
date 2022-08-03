@@ -13,7 +13,7 @@
 
 <script>
 import { v4 as uuid } from 'uuid'
-import { QUESTION_CATEGORY_FOLLOW_UP, QUESTION_CATEGORY_TYP } from '@/constants/Forms/questions'
+import { QUESTION_CATEGORY_FOLLOW_UP, QUESTION_CATEGORY_TYP } from '../../constants/Forms/questions'
 import QuestionCategoryAndType from './QuestionCategoryAndType.vue'
 
 export default {

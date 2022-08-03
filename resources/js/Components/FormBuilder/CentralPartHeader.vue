@@ -26,7 +26,7 @@ import {
   FORM_TRANSFER, HYPERLINK,
   LOGIC_JUMP, MERGE_TAGS,
   QUESTION_SETTINGS, RECALL_INFO, STORE_ANSWER
-} from '@/constants/Forms/centralPartViews'
+} from '../../constants/Forms/centralPartViews'
 import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/vue/solid'
 
 export default {

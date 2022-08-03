@@ -66,11 +66,11 @@
 </template>
 
 <script>
-import ArrowLeftSquareIcon from '@/Components/FormBuilder/Icons/ArrowLeftSquareIcon'
-import ContrastIcon from '@/Components/FormBuilder/Icons/ContrastIcon'
-import TYPIcon from '@/Components/FormBuilder/Icons/TYPIcon'
-import QuestionContextMenu from '@/Components/FormBuilder/QuestionContextMenu'
-import { QUESTION_CATEGORY_NAME, QUESTION_CATEGORY_TYP, QUESTION_TYPE_NAME } from '@/constants/Forms/questions'
+import ArrowLeftSquareIcon from '../../../Components/FormBuilder/Icons/ArrowLeftSquareIcon'
+import ContrastIcon from '../../../Components/FormBuilder/Icons/ContrastIcon'
+import TYPIcon from '../../../Components/FormBuilder/Icons/TYPIcon'
+import QuestionContextMenu from '../../../Components/FormBuilder/QuestionContextMenu'
+import { QUESTION_CATEGORY_NAME, QUESTION_CATEGORY_TYP, QUESTION_TYPE_NAME } from '../../../constants/Forms/questions'
 import { DotsVerticalIcon } from '@heroicons/vue/outline'
 import vClickOutside from 'click-outside-vue3'
 

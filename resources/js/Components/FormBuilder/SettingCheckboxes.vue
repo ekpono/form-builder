@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import Checkbox from '@/Components/Checkbox'
+import Checkbox from '../../Components/Checkbox'
 export default {
   name: 'SettingCheckboxes',
   components: { Checkbox },

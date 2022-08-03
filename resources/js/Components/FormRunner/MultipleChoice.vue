@@ -42,8 +42,8 @@
 
 <script>
 import vClickOutside from 'click-outside-vue3'
-import { shuffle } from '@/functions'
-import ChoiceButton from '@/Components/FormRunner/ChoiceButton'
+import { shuffle } from '../../functions'
+import ChoiceButton from '../../Components/FormRunner/ChoiceButton'
 
 export default {
   name: 'MultipleChoice',

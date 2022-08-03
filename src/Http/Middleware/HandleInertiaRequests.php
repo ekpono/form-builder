@@ -12,7 +12,7 @@ class HandleInertiaRequests extends Middleware
      *
      * @var string
      */
-    protected $rootView = 'ramaroo::app';
+    protected $rootView = 'form-builder::app';
 
     /**
      * Determine the current asset version.

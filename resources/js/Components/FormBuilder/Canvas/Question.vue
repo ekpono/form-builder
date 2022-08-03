@@ -55,10 +55,10 @@
 </template>
 
 <script>
-import QuestionCard from '@/Components/FormBuilder/Canvas/QuestionCard'
-import ExitSignIcon from '@/Components/FormBuilder/Icons/ExitSignIcon'
-import { QUESTION_CATEGORY_TYP, QUESTION_CATEGORY_KICK_OFF } from '@/constants/Forms/questions'
-import { compare } from '@/functions'
+import QuestionCard from '../../../Components/FormBuilder/Canvas/QuestionCard'
+import ExitSignIcon from '../../../Components/FormBuilder/Icons/ExitSignIcon'
+import { QUESTION_CATEGORY_TYP, QUESTION_CATEGORY_KICK_OFF } from '../../../constants/Forms/questions'
+import { compare } from '../../../functions'
 import _ from 'lodash'
 
 export default {

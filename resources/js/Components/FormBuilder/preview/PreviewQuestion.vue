@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import Question from '@/Components/FormRunner/Question'
+import Question from '../../../Components/FormRunner/Question'
 
 export default {
   name: 'PreviewQuestion',

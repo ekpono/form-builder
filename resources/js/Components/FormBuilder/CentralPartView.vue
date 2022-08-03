@@ -45,8 +45,8 @@
 
 <script>
 
-import CentralPartHeader from '@/Components/FormBuilder/CentralPartHeader'
-import { CANVAS, componentMap } from '@/constants/Forms/centralPartViews'
+import CentralPartHeader from '../../Components/FormBuilder/CentralPartHeader'
+import { CANVAS, componentMap } from '../../constants/Forms/centralPartViews'
 import { ChevronDoubleLeftIcon, XIcon } from '@heroicons/vue/solid'
 
 export default {

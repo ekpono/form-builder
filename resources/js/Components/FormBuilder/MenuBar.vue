@@ -119,7 +119,7 @@ import SaveAllIcon from './Icons/SaveAllIcon.vue'
 import AddEmojyIcon from './Icons/AddEmojyIcon.vue'
 import LinkIcon from './Icons/LinkIcon.vue'
 import DuplicateIcon from './Icons/DuplicateIcon.vue'
-import { LOGIC_JUMP, QUESTION_SETTINGS, FORM_TRANSFER, ADD_EMOJI, HYPERLINK, RECALL_INFO, MERGE_TAGS, STORE_ANSWER } from '@/constants/Forms/centralPartViews'
+import { LOGIC_JUMP, QUESTION_SETTINGS, FORM_TRANSFER, ADD_EMOJI, HYPERLINK, RECALL_INFO, MERGE_TAGS, STORE_ANSWER } from '../../constants/Forms/centralPartViews'
 
 export default {
   name: 'MenuBar',

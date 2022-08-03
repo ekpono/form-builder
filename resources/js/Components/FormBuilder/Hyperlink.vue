@@ -25,8 +25,8 @@
 </template>
 
 <script>
-import Input from '@/Components/Input'
-import Label from '@/Components/Label'
+import Input from '../../Components/Input'
+import Label from '../../Components/Label'
 
 export default {
   name: 'Hyperlink',

@@ -65,7 +65,7 @@
 </template>
 
 <script>
-import IconBase, { iconProps } from '@/Components/FormBuilder/Icons/IconBase'
+import IconBase, { iconProps } from '../../../Components/FormBuilder/Icons/IconBase'
 
 export default {
   name: 'GoogleSheetsIcon',

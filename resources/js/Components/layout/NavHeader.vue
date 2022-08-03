@@ -32,7 +32,7 @@
         <img
           v-if="! $page.props.sidebar"
           class="h-16 w-auto"
-          src="/images/logo.png"
+          src="/vendor/form-builder/images/logo.png"
           alt="Workflow"
         >
       </div>
@@ -62,7 +62,7 @@
             >
               <img
                 class="h-12 w-12 rounded-full"
-                src="/images/company-logo.png"
+                src="/vendor/form-builder/images/company-logo.png"
                 alt=""
               >
               <span

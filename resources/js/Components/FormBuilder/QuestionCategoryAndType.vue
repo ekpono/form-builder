@@ -37,14 +37,14 @@ import {
   QUESTION_CATEGORY_FOLLOW_UP,
   QUESTION_CATEGORY_TYP,
   QUESTION_TYPE_DELAY, QUESTION_TYPE_RATING_SCORE
-} from '@/constants/Forms/questions'
-import QuestionIcon from '@/Components/FormBuilder/Icons/QuestionIcon'
-import QuestionAddIcon from '@/Components/FormBuilder/Icons/QuestionAddIcon'
-import HandshakeIcon from '@/Components/FormBuilder/Icons/HandshakeIcon'
-import MultipleChoiceIcon from '@/Components/FormBuilder/Icons/MultipleChoiceIcon'
-import ClockIcon from '@/Components/FormBuilder/Icons/ClockIcon'
+} from '../../constants/Forms/questions'
+import QuestionIcon from '../../Components/FormBuilder/Icons/QuestionIcon'
+import QuestionAddIcon from '../../Components/FormBuilder/Icons/QuestionAddIcon'
+import HandshakeIcon from '../../Components/FormBuilder/Icons/HandshakeIcon'
+import MultipleChoiceIcon from '../../Components/FormBuilder/Icons/MultipleChoiceIcon'
+import ClockIcon from '../../Components/FormBuilder/Icons/ClockIcon'
 import { StarIcon } from '@heroicons/vue/outline'
-import { UNAVAILABLE_QUESTIONS_BY_FORM_CATEGORY } from '@/constants/Forms/form'
+import { UNAVAILABLE_QUESTIONS_BY_FORM_CATEGORY } from '../../constants/Forms/form'
 
 export default {
   name: 'QuestionCategoryAndType',

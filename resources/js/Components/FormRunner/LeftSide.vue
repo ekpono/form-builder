@@ -62,7 +62,7 @@
 
 <script>
 
-import FormProgress from '@/Components/FormRunner/FormProgress'
+import FormProgress from '../../Components/FormRunner/FormProgress'
 import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/vue/solid'
 
 export default {

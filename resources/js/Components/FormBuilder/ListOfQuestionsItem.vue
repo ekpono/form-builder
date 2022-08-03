@@ -27,7 +27,7 @@
 
 <script>
 import QuestionLabel from './QuestionLabel.vue'
-import { QUESTION_CATEGORY_TYP } from '@/constants/Forms/questions'
+import { QUESTION_CATEGORY_TYP } from '../../constants/Forms/questions'
 import { DotsVerticalIcon } from '@heroicons/vue/outline'
 
 export default {
