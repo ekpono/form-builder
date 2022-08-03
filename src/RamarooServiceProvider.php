@@ -32,7 +32,7 @@ class RamarooServiceProvider extends ServiceProvider
 
             // Publishing assets.
             $this->publishes([
-                __DIR__.'/../public' => public_path('vendor/form-builder'),
+                __DIR__.'/../dist' => public_path('vendor/form-builder'),
             ], 'form-builder-assets');
 
             // Registering package commands.
