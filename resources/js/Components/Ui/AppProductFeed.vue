@@ -5,7 +5,7 @@
       class="mx-auto"
       width="104"
       height="104"
-      src="/images/preview-comment.png"
+      src="/vendor/form-builder/images/preview-comment.png"
       alt=""
     >
     <h5 class="my-3 text-xs font-semibold">
