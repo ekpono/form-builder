@@ -40,6 +40,7 @@ class InstallCommand extends Command
             '--force' => true,
         ]);
 
+        $this->comment('Seeding default database...');
         Artisan::call('db:seed', ['--class' => 'Shopceed\\FormBuilder\\Seeds\\DefaultDatabaseSeeder']);
     }
 }
