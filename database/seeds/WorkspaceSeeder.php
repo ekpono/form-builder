@@ -16,11 +16,13 @@ class WorkspaceSeeder extends Seeder
     public function run()
     {
         $workspaceModel = config('form-builder.workerspace_model');
+        $userModel = config('form-builder.user_model');
+        $userId = $userModel::where('email', config('form-builder.default_email'));
 
         if ($workspaceModel::count() > 0 ) return;
 
         $workspaceModel::create([
-            "user_id" => User::first()->id,
+            "user_id" => $userId,
             "name" => $workspaceModel::DEFAULT_NAME
         ]);
     }
