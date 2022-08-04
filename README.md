@@ -16,6 +16,8 @@ composer require shopceed-nl/form-builder-package
 
 ## Usage
 
+User must login
+
 ```php
 php artisan email-builder:install
 php artisan migrate
