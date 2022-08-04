@@ -12,6 +12,7 @@ return [
     'file_model' => Shopceed\FormBuilder\Models\File::class,
     'workerspace_model' => Shopceed\FormBuilder\Models\Workspace::class,
     'identity_model' => Shopceed\FormBuilder\Models\Identity::class,
+    'form_model' => Shopceed\FormBuilder\Models\Form::class,
     'middleware' => [
         'web',
         'auth',
