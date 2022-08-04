@@ -3,7 +3,7 @@
 Form builder package provides an extensive and highly configurable form building questionaire to get data from your user.
 
 <p align="center">
-  <img src="form-bulder.png" width="350" alt="accessibility text">
+  <img src="form-bulder.png" alt="accessibility text">
 </p>
 
 ## Installation
