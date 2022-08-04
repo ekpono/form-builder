@@ -2,7 +2,7 @@
 
 namespace Shopceed\FormBuilder\Seeds;
 
-use App\Models\Store;
+use Shopceed\FormBuilder\Models\Store;
 use Shopceed\FormBuilder\Models\Workspace;
 use Illuminate\Database\Seeder;
 
