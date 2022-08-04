@@ -17,12 +17,12 @@ class WorkspaceSeeder extends Seeder
     {
         $workspaceModel = config('form-builder.workerspace_model');
         $userModel = config('form-builder.user_model');
-        $userId = $userModel::where('email', config('form-builder.default_email'))->first();
+        $user = $userModel::where('email', config('form-builder.default_email'))->first();
 
         if ($workspaceModel::count() > 0 ) return;
 
         $workspaceModel::create([
-            "user_id" => $userId,
+            "user_id" => $user->id,
             "name" => $workspaceModel::DEFAULT_NAME
         ]);
     }
