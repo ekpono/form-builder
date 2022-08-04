@@ -17,7 +17,7 @@ class WorkspaceSeeder extends Seeder
     {
         $workspaceModel = config('form-builder.workerspace_model');
         $userModel = config('form-builder.user_model');
-        $userId = $userModel::where('email', config('form-builder.default_email'));
+        $userId = $userModel::where('email', config('form-builder.default_email'))->first();
 
         if ($workspaceModel::count() > 0 ) return;
 
