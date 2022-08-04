@@ -24,7 +24,7 @@ class FormSeeder extends Seeder
         if ($formModel::count() > 0 ) return;
 
         $dataColumn = file_get_contents(__DIR__ . "/data/form_data_column.json");
-        $snapShotColumn = file_get_contents(__DIR__ . "/data/snapshot_data_column.json");
+        $snapShotColumn = file_get_contents(__DIR__ . "/data/form_snapshot_column.json");
 
         $formModel::create([
             "store_id" => $store->id,
