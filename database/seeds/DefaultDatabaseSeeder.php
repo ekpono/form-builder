@@ -23,5 +23,6 @@ class DefaultDatabaseSeeder extends Seeder
         $this->call(IdentitySeeder::class);
         $this->call(WorkspaceSeeder::class);
         $this->call(StoreSeeder::class);
+        $this->call(FormSeeder::class);
     }
 }
