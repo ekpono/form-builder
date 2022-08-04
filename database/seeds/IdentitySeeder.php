@@ -3,7 +3,6 @@
 namespace Shopceed\FormBuilder\Seeds;
 
 use Shopceed\FormBuilder\Models\Identity;
-use App\Models\User;
 use Illuminate\Database\Seeder;
 use Ramsey\Uuid\Uuid;
 
@@ -16,10 +15,16 @@ class IdentitySeeder extends Seeder
      */
     public function run()
     {
-        if ( Identity::count() > 0 ) return;
+        $identityModel = config('form-builder.identity_model');
 
-        Identity::create([
-            "user_id" => User::first()->id,
+        if ( $identityModel::count() > 0 ) return;
+
+        $userModel = config('form-builder.user_model');
+        $defaultEmail = config('form-builder.default_email');
+        $defaultEmail = $userModel::where('email', $defaultEmail)->first();
+
+        $identityModel::create([
+            "user_id" => $defaultEmail->id,
             "provider" => "Default Provider",
             "uid" => Uuid::uuid4(),
             "access_token" => null,

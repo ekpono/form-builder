@@ -15,11 +15,14 @@ class StoreSeeder extends Seeder
      */
     public function run()
     {
-        if ( Store::count() > 0 ) return;
+        $workspaceModel = config('form-builder.workerspace_model');
+        $storeModel = config('form-builder.store_model');
 
-        Store::create([
-            "workspace_id" => Workspace::first()->id,
-            "identity_id" => Workspace::first()->id ,
+        if ( $storeModel::count() > 0 ) return;
+
+        $storeModel::create([
+            "workspace_id" => $workspaceModel::first()->id,
+            "identity_id" => $workspaceModel::first()->id ,
             "domain" => "bovoba-testing.myshopify.com",
             "currency_code" => "USD",
             "has_sms" => false,

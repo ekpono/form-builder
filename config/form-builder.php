@@ -10,6 +10,8 @@ return [
     'store_model' => Shopceed\FormBuilder\Models\Store::class,
     'order_model' => Shopceed\FormBuilder\Models\Order::class,
     'file_model' => Shopceed\FormBuilder\Models\File::class,
+    'workerspace_model' => Shopceed\FormBuilder\Models\Workspace::class,
+    'identity_model' => Shopceed\FormBuilder\Models\Identity::class,
     'middleware' => [
         'web',
         'auth',
@@ -18,4 +20,5 @@ return [
     'policies' => [
         \Shopceed\FormBuilder\Models\Form::class => \Shopceed\FormBuilder\Policies\FormPolicy::class,
     ],
+    'default_email' => env('FORM_BUILDER_DEFAULT_EMAIL', 'example@example.com')
 ];
