@@ -32,9 +32,9 @@ class FormSeeder extends Seeder
             "name" => "Default",
             "type" => "products",
             "category" => "pre_review",
-            "data" => $dataColumn,
+            "data" => json_encode($dataColumn),
             "uuid" => Uuid::uuid4(),
-            "snapshot" => $snapShotColumn
+            "snapshot" => json_encode($snapShotColumn)
         ]);
     }
 }
