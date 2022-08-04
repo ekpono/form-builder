@@ -21,7 +21,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Shopceed\\FormBuilder\\": "src"
+            "Shopceed\\FormBuilder\\": "src",
+            "Shopceed\\FormBuilder\\Seeds\\": "database/seeds"
         }
     },
     "autoload-dev": {
