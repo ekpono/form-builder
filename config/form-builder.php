@@ -9,7 +9,7 @@ return [
     'path' => env('FORM_BUILDER_URL', 'form-builder'),
 
 
-    'callback_url' => env('FORM_BUILDER_CALLBACK', env('APP_URL', 'http://localhost')),
+    'callback_url' => env('FORM_BUILDER_CALLBACK', 'http://localhost'),
 
 
     'user_model' => \App\Models\User::class,

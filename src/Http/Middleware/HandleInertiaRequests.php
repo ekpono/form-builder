@@ -37,7 +37,10 @@ class HandleInertiaRequests extends Middleware
             'auth' => [
                 'user' => $request->user(),
             ],
-            'path' => config('ramaroo.path'),
+            'path' => config('form-builder.path'),
+            'config' => [
+                'callback_url' => config('form-builder.callback_url')
+            ]
         ]);
     }
 }
