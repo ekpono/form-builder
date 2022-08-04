@@ -41,7 +41,7 @@ class InstallCommand extends Command
         ]);
 
         $this->comment('Database migration...');
-        $this->callSilent('php artisan migrate');
+        $this->callSilent('migrate');
 
         $this->comment('Seeding default data...');
         $this->callSilent('db:seed', ['--class' => 'Shopceed\\FormBuilder\\Seeds\\DefaultDatabaseSeeder']);
