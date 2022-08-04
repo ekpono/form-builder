@@ -1,10 +1,10 @@
-# Very short description of the package
+# Description
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/shopceed-nl/form-builder-package.svg?style=flat-square)](https://packagist.org/packages/shopceed-nl/form-builder-package)
-[![Total Downloads](https://img.shields.io/packagist/dt/shopceed-nl/form-builder-package.svg?style=flat-square)](https://packagist.org/packages/shopceed-nl/form-builder-package)
-![GitHub Actions](https://bitbucket.org/shopceed-nl/form-builder-package/actions/workflows/main.yml/badge.svg)
+Form builder package provides an extensive and highly configurable form building questionaire to get data from your user.
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+<p align="center">
+  <img src="form-bulder.png" width="350" alt="accessibility text">
+</p>
 
 ## Installation
 
@@ -16,7 +16,7 @@ composer require shopceed-nl/form-builder-package
 
 ## Usage
 
-User must login
+There must be an authentication guard
 
 ```php
 php artisan email-builder:install
@@ -27,7 +27,3 @@ Then visit `/form-builder`
 ```bash
 composer test
 ```
-
-## Laravel Package Boilerplate
-
-This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).
