@@ -2,13 +2,13 @@
 
 namespace Shopceed\FormBuilder\Http\Controllers\Pages;
 
-use App\Http\Controllers\Controller;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Shopceed\FormBuilder\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Shopceed\FormBuilder\Models\Form;
 use Shopceed\FormBuilder\Models\FormAnswer;
 use Shopceed\FormBuilder\Models\Order;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class FormRunnerController extends Controller
 {
@@ -24,7 +24,7 @@ class FormRunnerController extends Controller
         $order = Order::with('store')->firstWhere('uuid', $orderUuid);
 
         if ($form === null || $order === null) {
-            throw new NotFoundHttpException();
+            throw new ModelNotFoundException();
         }
 
         return Inertia::render(

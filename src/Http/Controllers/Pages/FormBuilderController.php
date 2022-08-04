@@ -2,7 +2,7 @@
 
 namespace Shopceed\FormBuilder\Http\Controllers\Pages;
 
-use App\Http\Controllers\Controller;
+use Shopceed\FormBuilder\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redirect;
 use Shopceed\FormBuilder\Models\File;
 use Shopceed\FormBuilder\Models\Form;

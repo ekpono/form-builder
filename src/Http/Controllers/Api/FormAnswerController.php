@@ -2,11 +2,11 @@
 
 namespace Shopceed\FormBuilder\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\FormAnswer\FormAnswerRequest;
-use App\Http\Resources\FormAnswerResource;
-use App\Models\Form;
-use App\Models\FormAnswer;
+use Shopceed\FormBuilder\Http\Controllers\Controller;
+use Shopceed\FormBuilder\Http\Requests\Form\FormAnswer\FormAnswerRequest;
+use Shopceed\FormBuilder\Http\Resources\FormAnswerResource;
+use Shopceed\FormBuilder\Models\Form;
+use Shopceed\FormBuilder\Models\FormAnswer;
 use Illuminate\Foundation\Http\FormRequest;
 
 class FormAnswerController extends Controller
