@@ -20,9 +20,8 @@ User must login
 
 ```php
 php artisan email-builder:install
-php artisan migrate
 ```
-
+Then visit `/form-builder`
 ### Testing
 
 ```bash
