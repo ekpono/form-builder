@@ -12,8 +12,6 @@ class File extends Model
 {
     use HasFactory;
 
-    public const DISK_S3 = 's3';
-
     protected $fillable = ['store_id', 'user_id', 'extension', 'disk', 'path', 'content_type', 'catalog'];
 
     protected $casts = [

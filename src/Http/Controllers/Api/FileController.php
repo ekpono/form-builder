@@ -15,13 +15,13 @@ class FileController extends Controller
     {
         $data = $request->validated();
         $filePath = str_replace('tmp/', '', $data['path']);
-        $storage = Storage::disk(File::DISK_S3);
+        $storage = Storage::disk(config('form-builder.file.disk'));
         $storage->copy($data['path'], $filePath);
 
         File::create([
             'user_id' => $request->user()->id,
             'store_id' => $request->current_store_id,
-            'disk' => File::DISK_S3,
+            'disk' => config('form-builder.file.disk'),
             'extension' => $data['extension'],
             'content_type' => $data['contentType'],
             'path' => $filePath,
