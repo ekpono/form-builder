@@ -23,11 +23,8 @@ class FormSeeder extends Seeder
 
         if ($formModel::count() > 0 ) return;
 
-        $dataColumnPath = __DIR__ . "/data/form_data_column.json";
-        $snapShotColumnPath = __DIR__ . "/data/form_snapshot_column.json";
-
-        $dataColumn = file_get_contents($dataColumnPath);
-        $snapShotColumn = file_get_contents($snapShotColumnPath);
+        $dataColumn = file_get_contents(__DIR__ . "/data/form_data_column.json");
+        $snapShotColumn = file_get_contents(__DIR__ . "/data/form_snapshot_column.json");
 
         $formModel::create([
             "store_id" => $store->id,
@@ -35,9 +32,9 @@ class FormSeeder extends Seeder
             "name" => "Default",
             "type" => "products",
             "category" => "pre_review",
-            "data" => $dataColumn,
+            "data" => json_decode($dataColumn, true),
             "uuid" => Uuid::uuid4(),
-            "snapshot" => $snapShotColumn
+            "snapshot" => json_decode($snapShotColumn, true)
         ]);
     }
 }
