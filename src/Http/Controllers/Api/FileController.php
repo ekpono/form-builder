@@ -17,8 +17,9 @@ class FileController extends Controller
         $filePath = str_replace('tmp/', '', $data['path']);
         $storage = Storage::disk(config('form-builder.file.disk'));
         $storage->copy($data['path'], $filePath);
+        $fileModel = config('form-builder.file_model');
 
-        File::create([
+        $fileModel::create([
             'user_id' => $request->user()->id,
             'store_id' => $request->current_store_id,
             'disk' => config('form-builder.file.disk'),

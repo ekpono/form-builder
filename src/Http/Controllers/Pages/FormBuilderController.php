@@ -33,6 +33,8 @@ class FormBuilderController extends Controller
     {
         $this->authorize('view', $form);
 
+        $fileModel = config('form-builder.file_model');
+
         return Inertia::render(
             'FormBuilder/Form',
             [
@@ -46,7 +48,7 @@ class FormBuilderController extends Controller
                     ->get(),
                 'files' => array_map(function ($file) {
                     return "$file[path].$file[extension]";
-                }, File::where('store_id', '=', $form->store_id)
+                }, $fileModel::where('store_id', '=', $form->store_id)
                     ->where('catalog', 'forms')
                     ->orderByDesc('created_at')
                     ->get()->toArray()),
