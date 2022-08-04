@@ -52,6 +52,7 @@ class RamarooServiceProvider extends ServiceProvider
     {
         // Automatically apply the package configuration
         $this->mergeConfigFrom(__DIR__.'/../config/form-builder.php', 'form-builder');
+        $this->app->make('Shopceed\FormBuilder\Seeds\DefaultDatabaseSeeder');
     }
 
     protected function registerRoutes()

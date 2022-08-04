@@ -3,6 +3,7 @@
 namespace Shopceed\FormBuilder\Commands;
 
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Artisan;
 
 class InstallCommand extends Command
 {
@@ -38,5 +39,7 @@ class InstallCommand extends Command
             '--tag' => 'form-builder-config',
             '--force' => true,
         ]);
+
+        Artisan::call('db:seed', ['--class' => 'Shopceed\\FormBuilder\\Seeds\\DefaultDatabaseSeeder']);
     }
 }

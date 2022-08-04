@@ -1,6 +1,6 @@
 <?php
 
-namespace Shopceed\FormBuilder\Database\Seeders;
+namespace Shopceed\FormBuilder\Seeds;
 
 use App\Models\User;
 use Shopceed\FormBuilder\Models\Workspace;
@@ -16,7 +16,7 @@ class WorkspaceSeeder extends Seeder
     public function run()
     {
         if (Workspace::count() > 0 ) return;
-        
+
         Workspace::create([
             "user_id" => User::first()->id,
             "name" => Workspace::DEFAULT_NAME

@@ -1,10 +1,10 @@
 <?php
 
-namespace Shopceed\FormBuilder\Database\Seeders;
+namespace Shopceed\FormBuilder\Seeds;
 
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class DefaultDatabaseSeeder extends Seeder
 {
     /**
      * Seed the application's database.
