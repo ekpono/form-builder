@@ -41,6 +41,6 @@ class InstallCommand extends Command
         ]);
 
         $this->comment('Seeding default database...');
-        Artisan::call('db:seed', ['--class' => 'Shopceed\\FormBuilder\\Seeds\\DefaultDatabaseSeeder']);
+        $this->callSilent('db:seed', ['--class' => 'Shopceed\\FormBuilder\\Seeds\\DefaultDatabaseSeeder']);
     }
 }
