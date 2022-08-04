@@ -41,9 +41,15 @@ class InstallCommand extends Command
         ]);
 
         $this->comment('Database migration...');
-        $this->callSilent('migrate', ['--path' => 'vendor/ekpono/form-builder-package']);
+        $this->callSilent('migrate');
 
         $this->comment('Seeding default data...');
         $this->callSilent('db:seed', ['--class' => 'Shopceed\\FormBuilder\\Seeds\\DefaultDatabaseSeeder']);
+
+        $this->comment('Everything went according to plan...👍🏻');
+
+        $this->comment('You can now visit /'.config('form-builder.path'));
+
+        return true;
     }
 }
