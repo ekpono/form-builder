@@ -16,7 +16,7 @@ class DefaultDatabaseSeeder extends Seeder
         $defaultEmail = config('form-builder.default_email');
         $userModel = config('form-builder.user_model');
 
-        if ( ! $userModel::where('email', $defaultEmail)->exist() ) {
+        if ( $userModel::where('email', $defaultEmail)->exists() ) {
             $this->call(UserSeeder::class);
         }
 
