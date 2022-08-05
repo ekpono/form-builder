@@ -19,7 +19,7 @@ class FormBuilderController extends Controller
      */
     public function index(Request $request)
     {
-        if ( auth()->check() ) {
+        if ( ! auth()->check() ) {
             abort(403, 'Unauthorized');
         }
 
