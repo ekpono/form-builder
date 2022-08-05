@@ -2,6 +2,7 @@
 
 namespace Shopceed\FormBuilder\Http\Controllers\Pages;
 
+use Shopceed\FormBuilder\Action\CreateForm;
 use Shopceed\FormBuilder\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redirect;
 use Shopceed\FormBuilder\Models\File;
@@ -18,9 +19,11 @@ class FormBuilderController extends Controller
      */
     public function index(Request $request)
     {
-        $defaultForm = Form::first();
-        $form = $defaultForm->replicate(['id']);
-        $form->save();
+        if ( auth()->check() ) {
+            abort(403, 'Unauthorized');
+        }
+
+        $form = CreateForm::create();
 
         return Redirect::route('form.builder.show', $form->id);
     }
