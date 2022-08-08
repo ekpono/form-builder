@@ -13,18 +13,21 @@ class CreateOrdersTable extends Migration
      */
     public function up()
     {
-        Schema::create('orders', function (Blueprint $table) {
-            $table->id();
-            $table->uuid()->index();
-            $table->unsignedBigInteger('store_id');
-            $table->string('external_id');
-            $table->string('status')->default(Shopceed\FormBuilder\Models\Order::STATUS_NEW);
-            $table->jsonb('limits');
-            $table->text('notes')->nullable();
-            $table->jsonb('data')->nullable();
-            $table->json('payload')->nullable();
-            $table->timestamps();
-        });
+        if ( Schema::hasTable('orders')) {
+            Schema::create('orders', function (Blueprint $table) {
+                $table->id();
+                $table->uuid()->index();
+                $table->unsignedBigInteger('store_id');
+                $table->string('external_id');
+                $table->string('status')->default(Shopceed\FormBuilder\Models\Order::STATUS_NEW);
+                $table->jsonb('limits');
+                $table->text('notes')->nullable();
+                $table->jsonb('data')->nullable();
+                $table->json('payload')->nullable();
+                $table->timestamps();
+            });
+        }
+
     }
 
     /**

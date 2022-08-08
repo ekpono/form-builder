@@ -13,17 +13,19 @@ class CreateStoresTable extends Migration
      */
     public function up()
     {
-        Schema::create('stores', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('workspace_id');
-            $table->unsignedBigInteger('identity_id');
-            $table->string('domain');
-            $table->string('currency_code')->nullable();
-            $table->boolean('has_sms')->default(0);
-            $table->jsonb('settings')->nullable();
-            $table->timestamps();
-            $table->softDeletes();
-        });
+        if ( Schema::hasTable('stores')) {
+            Schema::create('stores', function (Blueprint $table) {
+                $table->id();
+                $table->unsignedBigInteger('workspace_id');
+                $table->unsignedBigInteger('identity_id');
+                $table->string('domain');
+                $table->string('currency_code')->nullable();
+                $table->boolean('has_sms')->default(0);
+                $table->jsonb('settings')->nullable();
+                $table->timestamps();
+                $table->softDeletes();
+            });
+        }
     }
 
     /**

@@ -13,16 +13,19 @@ class CreateIdentitiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('identities', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->string('provider');
-            $table->string('uid')->nullable();
-            $table->string('access_token')->nullable();
-            $table->string('domain', 100);
-            $table->json('data');
-            $table->timestamps();
-        });
+        if ( Schema::hasTable('identities') ) {
+            Schema::create('identities', function (Blueprint $table) {
+                $table->id();
+                $table->unsignedBigInteger('user_id');
+                $table->string('provider');
+                $table->string('uid')->nullable();
+                $table->string('access_token')->nullable();
+                $table->string('domain', 100);
+                $table->json('data');
+                $table->timestamps();
+            });
+        }
+
     }
 
     /**

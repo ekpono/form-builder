@@ -13,17 +13,19 @@ class CreateTableFormAnswers extends Migration
      */
     public function up()
     {
-        Schema::create('form_answers', function (Blueprint $table) {
-            $table->uuid()->unique()->index();
-            $table->foreignUuid('form_uuid')->references('uuid')->on('forms');
-            $table->foreignUuid('order_uuid')->references('uuid')->on('orders');
-            $table->jsonb('answers');
-            $table->jsonb('params')->nullable();
-            $table->jsonb('order_items')->nullable();
-            $table->timestamps();
-            $table->dateTime('finished_at')->nullable();
-            $table->primary(['form_uuid', 'order_uuid']);
-        });
+        if (Schema::hasTable('form_answers')) {
+            Schema::create('form_answers', function (Blueprint $table) {
+                $table->uuid()->unique()->index();
+                $table->foreignUuid('form_uuid')->references('uuid')->on('forms');
+                $table->foreignUuid('order_uuid')->references('uuid')->on('orders');
+                $table->jsonb('answers');
+                $table->jsonb('params')->nullable();
+                $table->jsonb('order_items')->nullable();
+                $table->timestamps();
+                $table->dateTime('finished_at')->nullable();
+                $table->primary(['form_uuid', 'order_uuid']);
+            });
+        }
     }
 
     /**

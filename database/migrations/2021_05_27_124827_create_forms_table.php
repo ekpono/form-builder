@@ -14,23 +14,25 @@ class CreateFormsTable extends Migration
      */
     public function up()
     {
-        Schema::create('forms', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('store_id')->constrained();
-            $table->foreignId('user_id')->constrained();
-            $table->string('name');
-            $table->string('type');
-            $table->string('category');
-            $table->json('data');
-            $table->string('google_sheet_id')->nullable();
-            $table->uuid()->nullable()->index();
-            $table->jsonb('snapshot')->nullable();
-            $table->timestamps();
-            $table->softDeletes();
+        if (Schema::hasTable('forms')) {
+            Schema::create('forms', function (Blueprint $table) {
+                $table->id();
+                $table->foreignId('store_id')->constrained();
+                $table->foreignId('user_id')->constrained();
+                $table->string('name');
+                $table->string('type');
+                $table->string('category');
+                $table->json('data');
+                $table->string('google_sheet_id')->nullable();
+                $table->uuid()->nullable()->index();
+                $table->jsonb('snapshot')->nullable();
+                $table->timestamps();
+                $table->softDeletes();
 
-            // Indexes
-            $table->index(['store_id', 'user_id']);
-        });
+                // Indexes
+                $table->index(['store_id', 'user_id']);
+            });
+        }
     }
 
     /**
