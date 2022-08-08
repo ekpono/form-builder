@@ -13,7 +13,7 @@ class CreateStoresTable extends Migration
      */
     public function up()
     {
-        if ( Schema::hasTable('stores')) {
+        if ( ! Schema::hasTable('stores') ) {
             Schema::create('stores', function (Blueprint $table) {
                 $table->id();
                 $table->unsignedBigInteger('workspace_id');

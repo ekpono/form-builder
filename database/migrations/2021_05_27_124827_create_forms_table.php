@@ -14,7 +14,7 @@ class CreateFormsTable extends Migration
      */
     public function up()
     {
-        if (Schema::hasTable('forms')) {
+        if (! Schema::hasTable('forms')) {
             Schema::create('forms', function (Blueprint $table) {
                 $table->id();
                 $table->foreignId('store_id')->constrained();

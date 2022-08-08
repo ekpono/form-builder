@@ -13,7 +13,7 @@ class CreateTableFormAnswers extends Migration
      */
     public function up()
     {
-        if (Schema::hasTable('form_answers')) {
+        if (! Schema::hasTable('form_answers')) {
             Schema::create('form_answers', function (Blueprint $table) {
                 $table->uuid()->unique()->index();
                 $table->foreignUuid('form_uuid')->references('uuid')->on('forms');

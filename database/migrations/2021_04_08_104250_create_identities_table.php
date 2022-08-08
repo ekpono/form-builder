@@ -13,7 +13,7 @@ class CreateIdentitiesTable extends Migration
      */
     public function up()
     {
-        if ( Schema::hasTable('identities') ) {
+        if ( ! Schema::hasTable('identities') ) {
             Schema::create('identities', function (Blueprint $table) {
                 $table->id();
                 $table->unsignedBigInteger('user_id');
