@@ -39,7 +39,10 @@ class HandleInertiaRequests extends Middleware
             ],
             'path' => config('form-builder.path'),
             'config' => [
-                'callback_url' => config('form-builder.callback_url')
+                'callback_url' => config('form-builder.callback_url'),
+                'logo' => config('form-builder.logo'),
+                'company_logo' => config('form-builder.company_logo'),
+                'profile_picture' => config('form-builder.profile_picture'),
             ]
         ]);
     }

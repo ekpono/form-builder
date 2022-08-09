@@ -76,7 +76,7 @@
           <div class="flex-shrink-0 flex items-center px-4">
             <img
               class="h-12 w-auto"
-              src="/vendor/form-builder/images/logo.png"
+              :src="usePage().props.value.config.logo"
               alt="Workflow"
             >
           </div>
@@ -135,7 +135,7 @@
         <div class="flex items-center flex-shrink-0 px-4 justify-center">
           <img
             class="h-16 w-auto"
-            src="/vendor/form-builder/images/logo.png"
+            :src="usePage().props.value.config.logo"
             alt="Workflow"
           >
         </div>

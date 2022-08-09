@@ -187,5 +187,11 @@ return [
 
     'file' => [
         'disk' => env('FILESYSTEM_DISK', 's3')
-    ]
+    ],
+
+    'logo' => '/vendor/form-builder/images/logo.png',
+
+    'company_logo' => '/vendor/form-builder/images/company-logo.png',
+
+    'profile_picture' => 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
 ];
