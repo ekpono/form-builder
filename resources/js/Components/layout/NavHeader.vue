@@ -32,7 +32,7 @@
         <img
           v-if="! $page.props.sidebar"
           class="h-16 w-auto"
-          :src="usePage().props.value.config.logo"
+          :src="$page.props.config.logo"
           alt="Workflow"
         >
       </div>
@@ -62,7 +62,7 @@
             >
               <img
                 class="h-12 w-12 rounded-full"
-                :src="usePage().props.value.config.company_logo"
+                :src="$page.props.config.company_logo"
                 alt=""
               >
               <span
@@ -196,7 +196,7 @@
             >
               <img
                 class="h-8 w-8 rounded-full"
-                :src=usePage().props.value.config.profile_picture
+                :src=$page.props.config.profile_picture
                 alt=""
               >
               <span
@@ -289,6 +289,6 @@ export default {
     MailIcon,
     Link
   },
-  emits: ['open-sidebar']
+  emits: ['open-sidebar'],
 }
 </script>

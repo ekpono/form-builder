@@ -76,7 +76,7 @@
           <div class="flex-shrink-0 flex items-center px-4">
             <img
               class="h-12 w-auto"
-              :src="usePage().props.value.config.logo"
+              :src="$page.props.config.logo"
               alt="Workflow"
             >
           </div>
@@ -135,7 +135,7 @@
         <div class="flex items-center flex-shrink-0 px-4 justify-center">
           <img
             class="h-16 w-auto"
-            :src="usePage().props.value.config.logo"
+            :src="$page.props.config.logo"
             alt="Workflow"
           >
         </div>
@@ -168,13 +168,14 @@
           </nav>
         </div>
       </div>
-    </div>,
+    </div>
   </div>
 </template>
 
 <script>
 import { watch, ref } from 'vue'
 import SidebarNavigation from '../Ui/SidebarNavigation.vue'
+
 import {
   HomeIcon,
   XIcon,
