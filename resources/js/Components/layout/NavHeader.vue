@@ -67,7 +67,7 @@
               >
               <span
                 class="hidden text-gray-700 text-sm font-medium lg:block"
-              ><span class="sr-only">Open user menu for </span>blositive.nl</span>
+              ><span class="sr-only">Open user menu for </span>{{ $page.props.currentStore.domain }}</span>
               <ChevronDownIcon
                 class="hidden flex-shrink-0 ml-1 h-5 w-5 text-navy lg:block"
                 aria-hidden="true"
