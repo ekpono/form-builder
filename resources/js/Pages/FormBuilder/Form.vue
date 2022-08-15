@@ -669,13 +669,14 @@ export default {
       !this.showCentralPart && (this.showCentralPart = true)
     },
     handleClickDone: function () {
-      this.disallowEditor = true
-      this.formSnapshot = this.sanitizeForm(this.form)
-      setTimeout(() => {
-        this.saveForm(() => {
-          location.href = usePage().props.value.config.callback_url
-        })
-      }, 100)
+      console.log(usePage().props.value.config.callback_url)
+      // this.disallowEditor = true
+      // this.formSnapshot = this.sanitizeForm(this.form)
+      // setTimeout(() => {
+      //   this.saveForm(() => {
+      //     location.href = usePage().props.value.config.callback_url
+      //   })
+      // }, 100)
     },
     handleClickCancel: function () {
       this.toggleModal(
