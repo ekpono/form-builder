@@ -306,6 +306,7 @@ import Preview from './../../Components/FormBuilder/preview/Preview'
 import CanvasButton from './../../Components/FormBuilder/Canvas/Button'
 import TheLayout from '../../Layouts/TheLayout'
 const STORAGE_KEY = 'crpFormBuilderState'
+import { Inertia } from '@inertiajs/inertia'
 
 let setTimer
 
@@ -669,14 +670,13 @@ export default {
       !this.showCentralPart && (this.showCentralPart = true)
     },
     handleClickDone: function () {
-      console.log(usePage().props.value.config.callback_url)
-      // this.disallowEditor = true
-      // this.formSnapshot = this.sanitizeForm(this.form)
-      // setTimeout(() => {
-      //   this.saveForm(() => {
-      //     location.href = usePage().props.value.config.callback_url
-      //   })
-      // }, 100)
+      this.disallowEditor = true
+      this.formSnapshot = this.sanitizeForm(this.form)
+      setTimeout(() => {
+        this.saveForm(() => {
+          location.href = usePage().props.value.config.callback_url
+        })
+      }, 100)
     },
     handleClickCancel: function () {
       this.toggleModal(

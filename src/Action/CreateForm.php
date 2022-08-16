@@ -18,7 +18,7 @@ class CreateForm
             "user_id" => auth()->id(),
             "name" => "Default",
             "type" => "products",
-            "category" => "pre_review",
+            "category" => "review",
             "data" => json_decode($dataColumn, true),
             "uuid" => Uuid::uuid4(),
             "snapshot" => json_decode($snapShotColumn, true)
