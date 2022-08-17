@@ -16,7 +16,7 @@ class CreateForm
         return $formModel::create([
             "store_id" => auth()->user()->current_store_id,
             "user_id" => auth()->id(),
-            "name" => "Default",
+            "name" => "Form Builder -" . rand(10,100) ,
             "type" => $type,
             "category" => $category,
             "data" => json_decode($dataColumn, true),
