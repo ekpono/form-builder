@@ -1,12 +1,34 @@
 {
-  "typs": [{
-    "id":"42ebd73a-3cb3-401d-a76b-3376c62a90f9",
-    "title":"Thank you for your feedback",
-    "properties":[]
-  }],
-  "logic":[],
+  "typs": [
+    {
+      "id": "42ebd73a-3cb3-401d-a76b-3376c62a90f9",
+      "title": "Thank you for your feedback",
+      "properties": []
+    }
+  ],
+  "logic": [
+    {
+      "question_id": "91341e21-c844-4057-a490-317efb1bd67b",
+      "type": "form",
+      "conditions": [
+        {
+          "op": "==",
+          "compare_with": {
+            "id": "c3dbfa50-adfa-41fb-bf8a-d85616d7c076"
+          }
+        }
+      ],
+      "goto": "94fadb4e-95b6-4022-9814-02e08a7a8afb",
+      "otherwise": "3298eb84-4683-4e06-bc8a-f6858d01bbfa"
+    },
+    {
+      "question_id": "94fadb4e-95b6-4022-9814-02e08a7a8afb",
+      "type": "question",
+      "otherwise": "16e9384b-02c5-47ba-b367-3dcd2adf9011"
+    }
+  ],
   "kick_offs":[{
-    "id":"39e69fff-d1d3-4623-a690-b5876b00f011",
+    "id":"91341e21-c844-4057-a490-317efb1bd67b",
     "type":"yes_no",
     "title":"Are you ready to review your recent purchases?",
     "properties":{
