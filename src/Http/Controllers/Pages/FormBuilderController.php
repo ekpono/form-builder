@@ -23,7 +23,10 @@ class FormBuilderController extends Controller
             abort(403, 'Unauthorized');
         }
 
-        $form = CreateForm::create();
+        $type = $request->query('type') ?? 'products';
+        $category = $request->query('category') ?? 'review';
+
+        $form = CreateForm::create($type, $category);
 
         return Redirect::route('form.builder.show', $form->id);
     }

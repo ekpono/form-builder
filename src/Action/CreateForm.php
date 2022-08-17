@@ -6,7 +6,7 @@ use Ramsey\Uuid\Uuid;
 
 class CreateForm
 {
-    public static function create()
+    public static function create($type, $category)
     {
         $formModel = config('form-builder.form_model');
 
@@ -17,8 +17,8 @@ class CreateForm
             "store_id" => auth()->user()->current_store_id,
             "user_id" => auth()->id(),
             "name" => "Default",
-            "type" => "products",
-            "category" => "review",
+            "type" => $type,
+            "category" => $category,
             "data" => json_decode($dataColumn, true),
             "uuid" => Uuid::uuid4(),
             "snapshot" => json_decode($snapShotColumn, true)
