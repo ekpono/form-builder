@@ -7,7 +7,7 @@
     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between">
         <h2 class="flex font-semibold text-xl text-gray-800 leading-tight capitalize">
-          {{ formCategoryTitle(formCategory) }} <span v-if="! editNameMode">  form - {{ formName }}</span>
+          {{ formCategoryTitle(formCategory) }} &nbsp; <span v-if="! editNameMode">  form - {{ formName }}</span>
           <PencilAltIcon
               v-if="! editNameMode"
               class="ml-4 h-5 mx-auto mb-1 align-center cursor-pointer text-gray-400"
@@ -20,7 +20,7 @@
               v-click-outside="handleOutsideOnEditNameActive"
               type="text"
               name="store-hash"
-              class="shadow-sm ml-2 h-9 focus:ring-indigo-500 focus:border-indigo-500 inline-flex w-1/2 sm:text-sm border-gray-300 rounded-md"
+              class="shadow-sm ml-2 h-9 focus:ring-indigo-500 focus:border-indigo-500 inline-flex sm:text-sm border-gray-300 rounded-md"
               placeholder="Form Name"
               @keyup.enter="editNameMode = false"
           >
