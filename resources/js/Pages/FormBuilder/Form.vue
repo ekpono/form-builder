@@ -7,13 +7,28 @@
     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight capitalize">
-          {{ formCategoryTitle(formCategory) }} form - {{ formName }}
+          {{ formCategoryTitle(formCategory) }} <span v-if="! editNameMode">  form - {{ formName }}</span>
+          <PencilAltIcon
+              v-if="! editNameMode"
+              class="ml-4 h-5 mx-auto mb-1 align-center cursor-pointer text-gray-400"
+              @click="editNameMode = ! editNameMode"
+          />
+          <input
+              v-if="editNameMode"
+              id="template-name"
+              v-model="formName"
+              v-click-outside="handleOutsideOnEditNameActive"
+              type="text"
+              name="store-hash"
+              class="shadow-sm ml-2 focus:ring-indigo-500 focus:border-indigo-500 block w-1/2 sm:text-sm border-gray-300 rounded-md"
+              placeholder="Form Name"
+              @keyup.enter="editNameMode = false"
+          >
         </h2>
         <div
           class="text-xxs"
           :class="[saving ? 'text-gray-500' : 'text-green-600']"
-        >
-          <CheckCircleIcon class="h-5 mx-auto mb-1" />
+        ><CheckCircleIcon class="h-5 mx-auto mb-1" />
           {{ saving ? 'Saving in progress' : 'Saved' }}
         </div>
         <div class="flex gap-3 items-center">
@@ -300,13 +315,12 @@ import Modal from './../../Components/Modal'
 import Errors from './../../Components/FormBuilder/QuestionErrors'
 import CentralPartView from './../../Components/FormBuilder/CentralPartView'
 import { CANVAS, DESIGN_THEME, QUESTION_SETTINGS } from '../../constants/Forms/centralPartViews'
-import { CheckCircleIcon } from '@heroicons/vue/solid'
+import { CheckCircleIcon, PencilAltIcon } from '@heroicons/vue/solid'
 import { delay } from 'lodash'
 import Preview from './../../Components/FormBuilder/preview/Preview'
 import CanvasButton from './../../Components/FormBuilder/Canvas/Button'
 import TheLayout from '../../Layouts/TheLayout'
 const STORAGE_KEY = 'crpFormBuilderState'
-import { Inertia } from '@inertiajs/inertia'
 
 let setTimer
 
@@ -330,7 +344,8 @@ export default {
     MediaManager,
     Errors,
     CanvasButton,
-    CheckCircleIcon
+    CheckCircleIcon,
+    PencilAltIcon
   },
   directives: {
     clickOutside: vClickOutside.directive
@@ -345,6 +360,7 @@ export default {
     formSnapshot: usePage().props.value.form.snapshot,
     formCategory: usePage().props.value.form.category,
     files: usePage().props.value.files,
+    formName: usePage().props.value.form.name,
     currentQuestionId: null,
     centralPartView: null,
     showMediaManager: false,
@@ -354,12 +370,10 @@ export default {
     saving: false,
     disallowEditor: false,
     previewType: null,
-    showCanvas: false
+    showCanvas: false,
+    editNameMode: false
   }),
   computed: {
-    formName: function () {
-      return usePage().props.value.form.name
-    },
     currentQuestionCategory: function () {
       return this.currentQuestion?.category
     },
@@ -411,7 +425,7 @@ export default {
   },
   mounted () {
     try {
-      this.logger()
+      this.turnOffSideBar()
       const state = JSON.parse(localStorage.getItem(STORAGE_KEY))
       if (state.formId !== this.formId || !this.allQuestions.find(q => q.id === state.currentQuestionId)) {
         this.setCurrentItem(this.allQuestions[0])
@@ -428,8 +442,13 @@ export default {
     }
   },
   methods: {
-    logger () {
+    turnOffSideBar () {
       usePage().props.value.sidebar = false
+    },
+    handleOutsideOnEditNameActive () {
+      if (this.editNameMode) {
+        this.editNameMode = false
+      }
     },
     saveForm (cb) {
       clearTimeout(setTimer)
@@ -438,7 +457,7 @@ export default {
           this.saving = true
           await axios.put(
             route('api.forms.update', this.formId),
-            { data: this.sanitizeForm(this.form), category: this.formCategory, snapshot: this.formSnapshot },
+            { data: this.sanitizeForm(this.form), category: this.formCategory, snapshot: this.formSnapshot, name: this.formName  },
             { headers: { 'X-Store-Id': this.storeId } }
           )
         } catch (e) {
