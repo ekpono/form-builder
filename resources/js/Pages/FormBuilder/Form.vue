@@ -20,7 +20,7 @@
               v-click-outside="handleOutsideOnEditNameActive"
               type="text"
               name="store-hash"
-              class="shadow-sm ml-2 focus:ring-indigo-500 focus:border-indigo-500 inline-flex w-1/2 sm:text-sm border-gray-300 rounded-md"
+              class="shadow-sm ml-2 h-9 focus:ring-indigo-500 focus:border-indigo-500 inline-flex w-1/2 sm:text-sm border-gray-300 rounded-md"
               placeholder="Form Name"
               @keyup.enter="editNameMode = false"
           >
