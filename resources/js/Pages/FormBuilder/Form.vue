@@ -6,7 +6,7 @@
   >
     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight capitalize">
+        <h2 class="flex font-semibold text-xl text-gray-800 leading-tight capitalize">
           {{ formCategoryTitle(formCategory) }} <span v-if="! editNameMode">  form - {{ formName }}</span>
           <PencilAltIcon
               v-if="! editNameMode"
