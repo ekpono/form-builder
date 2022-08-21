@@ -1,7 +1,53 @@
 {
-  "typs":[],
-  "logic":[],
-  "kick_offs":[],
-  "follow_ups":[],
-  "allow_users_files":true
+  "typs": [
+    {
+      "id": "42ebd73a-3cb3-401d-a76b-3376c62a90f9",
+      "title": "Thank you for your feedback",
+      "properties": []
+    }
+  ],
+  "logic": [
+    {
+      "question_id": "91341e21-c844-4057-a490-317efb1bd67b",
+      "type": "form",
+      "conditions": [
+        {
+          "op": "==",
+          "compare_with": {
+            "id": "c3dbfa50-adfa-41fb-bf8a-d85616d7c076"
+          }
+        }
+      ],
+      "goto": "94fadb4e-95b6-4022-9814-02e08a7a8afb",
+      "otherwise": "3298eb84-4683-4e06-bc8a-f6858d01bbfa"
+    },
+    {
+      "question_id": "94fadb4e-95b6-4022-9814-02e08a7a8afb",
+      "type": "question",
+      "otherwise": "16e9384b-02c5-47ba-b367-3dcd2adf9011"
+    }
+  ],
+  "kick_offs":[{
+    "id":"91341e21-c844-4057-a490-317efb1bd67b",
+    "type":"yes_no",
+    "title":"Are you ready to review your recent purchases?",
+    "properties":{
+      "choices":[{
+        "id":"d4848a88-b266-4f59-9fc2-84d89c0c3da6",
+        "label":"Yes"
+      },{
+        "id":"8f7b5064-b1d2-49eb-b24d-a288c1d57799",
+        "label":"No"
+      }]
+    }}
+  ],
+  "follow_ups":[{
+    "id":"cb8e4907-53fe-4bc4-83e2-da1754b0ea9e",
+    "type":"open",
+    "title":"Are you satisfied with your purchase?",
+    "properties":{
+      "placeholder":"Staring problem"
+    }
+  }],
+  "allow_users_files":false
 }
