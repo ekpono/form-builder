@@ -425,6 +425,9 @@ export default {
   },
   mounted () {
     try {
+      if (route().params.mode === 'preview') {
+        this.showPreviewForm()
+      }
       this.turnOffSideBar()
       const state = JSON.parse(localStorage.getItem(STORAGE_KEY))
       if (state.formId !== this.formId || !this.allQuestions.find(q => q.id === state.currentQuestionId)) {
