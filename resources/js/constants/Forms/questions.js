@@ -71,7 +71,7 @@ export const SETTINGS = {
 
 export const SETTING_TITLE = {
   required: 'Is question required?',
-  allow_multiple_selection: 'Multiple selection possble?',
+  allow_multiple_selection: 'Multiple selection possible?',
   allow_other_choice: 'Include "other" answer option',
   randomize: 'Randomize answer options?',
   period: 'Period selector',

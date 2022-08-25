@@ -1,4 +1,4 @@
-import { QUESTION_TYPE_RATING_SCORE } from '@/constants/Forms/questions'
+import { QUESTION_TYPE_RATING_SCORE } from './questions'
 
 export const FORM_CATEGORY_PRE_REVIEW = 'pre_review'
 export const FORM_CATEGORY_REVIEW = 'review'

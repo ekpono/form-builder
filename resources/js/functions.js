@@ -1,4 +1,4 @@
-import { QUESTION_TYPE_YES_NO } from '@/constants/Forms/questions'
+import { QUESTION_TYPE_YES_NO } from './constants/Forms/questions'
 import { v4 as uuid } from 'uuid'
 import axios from 'axios'
 

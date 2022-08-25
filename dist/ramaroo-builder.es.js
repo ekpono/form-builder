@@ -4840,7 +4840,7 @@ const SETTINGS = {
 };
 const SETTING_TITLE = {
   required: "Is question required?",
-  allow_multiple_selection: "Multiple selection possble?",
+  allow_multiple_selection: "Multiple selection possible?",
   allow_other_choice: 'Include "other" answer option',
   randomize: "Randomize answer options?",
   period: "Period selector",
@@ -21508,7 +21508,7 @@ function _sfc_render$U(_ctx, _cache, $props, $setup, $data, $options) {
 var Error$1 = /* @__PURE__ */ _export_sfc$1(_sfc_main$U, [["render", _sfc_render$U]]);
 const CHANGE_FORM_WARNING_MESSAGE = "Are you sure? Rating score and Review block specials questions will be erased";
 const TRY_TO_DELETE_PRE_REVIEW_KICK_OFF_MESSAGE = "You can't delete kick-off question of pre-review form";
-const PRE_REVIEW_FORM_TRANSFER_ERROR_MESSAGE = "You must to create form transfer form yes option of kick-off question";
+const PRE_REVIEW_FORM_TRANSFER_ERROR_MESSAGE = "Kick off question missing form transfer";
 const NO_TYPS_ERROR_MESSAGE = "You must create at least one thank you page";
 var messages = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,

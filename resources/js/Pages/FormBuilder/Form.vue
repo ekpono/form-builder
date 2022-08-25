@@ -310,11 +310,17 @@ import {
   PRE_REVIEW_FORM_TRANSFER_ERROR_MESSAGE,
   NO_TYPS_ERROR_MESSAGE
 } from '../../constants/Forms/messages'
-import { filterFormQuestions, injectDefaultPreReviewYesNo, uploadFile } from '@/functions'
+import { filterFormQuestions, injectDefaultPreReviewYesNo, uploadFile } from '../../functions'
 import Modal from './../../Components/Modal'
 import Errors from './../../Components/FormBuilder/QuestionErrors'
 import CentralPartView from './../../Components/FormBuilder/CentralPartView'
-import { CANVAS, DESIGN_THEME, QUESTION_SETTINGS } from '../../constants/Forms/centralPartViews'
+import {
+  CANVAS,
+  DESIGN_THEME,
+  FORM_TRANSFER,
+  LOGIC_JUMP,
+  QUESTION_SETTINGS
+} from '../../constants/Forms/centralPartViews'
 import { CheckCircleIcon, PencilAltIcon } from '@heroicons/vue/solid'
 import { delay } from 'lodash'
 import Preview from './../../Components/FormBuilder/preview/Preview'
