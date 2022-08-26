@@ -51,7 +51,7 @@ class Form extends Model
     public static function getCategories(): array
     {
         return [
-//            self::CAT_PRE_REVIEW,
+            self::CAT_PRE_REVIEW,
             self::CAT_REVIEW,
             //            TODO: Not implemented on the first stage
             //            Template::CAT_REVIEW_FOLLOW_UP,
