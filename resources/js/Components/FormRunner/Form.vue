@@ -192,27 +192,27 @@ export default {
           if (condition.logic_op === 'AND' && !isTrue) {
             break
           }
-          if (!condition.op || (!condition.compare_with?.id && !condition.compare_with?.value)) {
+          if (!condition.op || (!condition.compare_with?.id && !condition.compare_with?.val)) {
             continue
           }
           switch (condition.op) {
             case '==':
-              isTrue = !!answers.find(a => condition.compare_with?.id ? a.id === condition.compare_with.id : a.value === condition.compare_with.value)
+              isTrue = !!answers.find(a => condition.compare_with?.id ? a.id === condition.compare_with.id : a.value === condition.compare_with.val)
               break
             case '!=':
-              isTrue = !!answers.find(a => condition.compare_with?.id ? a.id !== condition.compare_with.id : a.value !== condition.compare_with.value)
+              isTrue = !!answers.find(a => condition.compare_with?.id ? a.id !== condition.compare_with.id : a.value !== condition.compare_with.val)
               break
             case '>':
-              isTrue = !!answers.find(a => a.value > condition.compare_with?.value)
+              isTrue = !!answers.find(a => a.value > condition.compare_with?.val)
               break
             case '<':
-              isTrue = !!answers.find(a => a.value < condition.compare_with?.value)
+              isTrue = !!answers.find(a => a.value < condition.compare_with?.val)
               break
             case '>=':
-              isTrue = !!answers.find(a => a.value >= condition.compare_with?.value)
+              isTrue = !!answers.find(a => a.value >= condition.compare_with?.val)
               break
             case '<=':
-              isTrue = !!answers.find(a => a.value <= condition.compare_with?.value)
+              isTrue = !!answers.find(a => a.value <= condition.compare_with?.val)
               break
           }
         }

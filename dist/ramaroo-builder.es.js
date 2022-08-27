@@ -27316,44 +27316,44 @@ const _sfc_main$7 = {
           if (condition.logic_op === "AND" && !isTrue) {
             break;
           }
-          if (!condition.op || !((_a = condition.compare_with) == null ? void 0 : _a.id) && !((_b = condition.compare_with) == null ? void 0 : _b.value)) {
+          if (!condition.op || !((_a = condition.compare_with) == null ? void 0 : _a.id) && !((_b = condition.compare_with) == null ? void 0 : _b.val)) {
             continue;
           }
           switch (condition.op) {
             case "==":
               isTrue = !!answers.find((a2) => {
                 var _a2;
-                return ((_a2 = condition.compare_with) == null ? void 0 : _a2.id) ? a2.id === condition.compare_with.id : a2.value === condition.compare_with.value;
+                return ((_a2 = condition.compare_with) == null ? void 0 : _a2.id) ? a2.id === condition.compare_with.id : a2.value === condition.compare_with.val;
               });
               break;
             case "!=":
               isTrue = !!answers.find((a2) => {
                 var _a2;
-                return ((_a2 = condition.compare_with) == null ? void 0 : _a2.id) ? a2.id !== condition.compare_with.id : a2.value !== condition.compare_with.value;
+                return ((_a2 = condition.compare_with) == null ? void 0 : _a2.id) ? a2.id !== condition.compare_with.id : a2.value !== condition.compare_with.val;
               });
               break;
             case ">":
               isTrue = !!answers.find((a2) => {
                 var _a2;
-                return a2.value > ((_a2 = condition.compare_with) == null ? void 0 : _a2.value);
+                return a2.value > ((_a2 = condition.compare_with) == null ? void 0 : _a2.val);
               });
               break;
             case "<":
               isTrue = !!answers.find((a2) => {
                 var _a2;
-                return a2.value < ((_a2 = condition.compare_with) == null ? void 0 : _a2.value);
+                return a2.value < ((_a2 = condition.compare_with) == null ? void 0 : _a2.val);
               });
               break;
             case ">=":
               isTrue = !!answers.find((a2) => {
                 var _a2;
-                return a2.value >= ((_a2 = condition.compare_with) == null ? void 0 : _a2.value);
+                return a2.value >= ((_a2 = condition.compare_with) == null ? void 0 : _a2.val);
               });
               break;
             case "<=":
               isTrue = !!answers.find((a2) => {
                 var _a2;
-                return a2.value <= ((_a2 = condition.compare_with) == null ? void 0 : _a2.value);
+                return a2.value <= ((_a2 = condition.compare_with) == null ? void 0 : _a2.val);
               });
               break;
           }
@@ -27377,7 +27377,7 @@ const _sfc_main$7 = {
     }
   }
 };
-const _withScopeId$1 = (n2) => (pushScopeId("data-v-6fd4dbc7"), n2 = n2(), popScopeId(), n2);
+const _withScopeId$1 = (n2) => (pushScopeId("data-v-19e30577"), n2 = n2(), popScopeId(), n2);
 const _hoisted_1$7 = { class: "flex justify-between" };
 const _hoisted_2$4 = { class: "text-xl font-bold" };
 const _hoisted_3$3 = {
@@ -27440,7 +27440,7 @@ function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
     ], 6)
   ], 64);
 }
-var Form = /* @__PURE__ */ _export_sfc$1(_sfc_main$7, [["render", _sfc_render$7], ["__scopeId", "data-v-6fd4dbc7"]]);
+var Form = /* @__PURE__ */ _export_sfc$1(_sfc_main$7, [["render", _sfc_render$7], ["__scopeId", "data-v-19e30577"]]);
 const _sfc_main$6 = {
   name: "PreviewForm",
   components: {
