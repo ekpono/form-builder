@@ -25,9 +25,9 @@
 </template>
 
 <script>
-import GoogleSheetsIcon from '@/Components/FormBuilder/Icons/GoogleSheetsIcon'
-import Modal from '@/Components/Modal'
-import { delay } from '@/functions'
+import GoogleSheetsIcon from '../../Components/FormBuilder/Icons/GoogleSheetsIcon'
+import Modal from '../../Components/Modal'
+import { delay } from '../../functions'
 import axios from 'axios'
 
 export default {

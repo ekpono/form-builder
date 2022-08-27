@@ -103,7 +103,7 @@ import {
   QUESTION_CATEGORY_FOLLOW_UP,
   QUESTION_CATEGORY_KICK_OFF,
   QUESTION_CATEGORY_TYP
-} from '@/constants/Forms/questions'
+} from '../../../constants/Forms/questions'
 
 export default {
   name: 'Canvas',

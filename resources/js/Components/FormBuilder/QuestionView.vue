@@ -85,14 +85,14 @@ import {
   QUESTION_TYPE_MULTIPLE_CHOICE,
   QUESTION_TYPE_OPEN, QUESTION_TYPE_RATING_SCORE,
   QUESTION_TYPE_YES_NO
-} from '@/constants/Forms/questions'
+} from '../../constants/Forms/questions'
 import QuestionOpen from './QuestionOpen.vue'
 import QuestionMultipleChoice from './QuestionMultipleChoice.vue'
 import QuestionYesNo from './QuestionYesNo.vue'
-import QuestionTimeDelay from '@/Components/FormBuilder/QuestionTimeDelay'
-import QuestionRatingScore from '@/Components/FormBuilder/QuestionRatingScore'
-import TextField from '@/Components/FormBuilder/TextField'
-import ControlsIcon from '@/Components/FormBuilder/Icons/ControlsIcon'
+import QuestionTimeDelay from '../../Components/FormBuilder/QuestionTimeDelay'
+import QuestionRatingScore from '../../Components/FormBuilder/QuestionRatingScore'
+import TextField from '../../Components/FormBuilder/TextField'
+import ControlsIcon from '../../Components/FormBuilder/Icons/ControlsIcon'
 
 export default {
   name: 'QuestionView',

@@ -60,7 +60,7 @@
 </template>
 
 <script>
-import { PURCHASED_ITEMS_CHOICE_QUESTION, QUESTION_TYPE_PURCHASED_ITEMS_CHOICE } from '@/constants/Forms/questions'
+import { PURCHASED_ITEMS_CHOICE_QUESTION, QUESTION_TYPE_PURCHASED_ITEMS_CHOICE } from '../../constants/Forms/questions'
 import moment from 'moment'
 
 export default {
