@@ -2,6 +2,7 @@
 
 namespace Shopceed\FormBuilder\Http\Controllers\Pages;
 
+use Illuminate\Support\Facades\Storage;
 use Shopceed\FormBuilder\Action\CreateForm;
 use Shopceed\FormBuilder\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redirect;
@@ -40,6 +41,7 @@ class FormBuilderController extends Controller
         $this->authorize('view', $form);
 
         $fileModel = config('form-builder.file_model');
+        $storage = Storage::disk(config('form-builder.file.disk'));
 
         return Inertia::render(
             'FormBuilder/Form',
@@ -52,8 +54,8 @@ class FormBuilderController extends Controller
                     ->with('user')
                     ->orderBy('id')
                     ->get(),
-                'files' => array_map(function ($file) {
-                    return "$file[path].$file[extension]";
+                'files' => array_map(function ($file) use($storage) {
+                    return $storage->url($file['path']);
                 }, $fileModel::where('store_id', '=', $form->store_id)
                     ->where('catalog', 'forms')
                     ->orderByDesc('created_at')

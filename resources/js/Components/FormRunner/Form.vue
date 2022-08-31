@@ -114,7 +114,7 @@ export default {
     },
     questions: function () {
       return [
-        ...(this.formType === FORM_TYPE_PRODUCT && this.formCategory === FORM_CATEGORY_REVIEW ? [PURCHASED_ITEMS_CHOICE_QUESTION] : []),
+        ...(this.formType === FORM_TYPE_PRODUCT && this.formCategory === FORM_CATEGORY_REVIEW ? [] : []),
         ...this.chosenOrderItems.length > 0
           ? this.chosenOrderItems.reduce((acc, i) => [
             ...acc,

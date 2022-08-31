@@ -27239,7 +27239,7 @@ const _sfc_main$7 = {
     },
     questions: function() {
       return [
-        ...this.formType === FORM_TYPE_PRODUCT && this.formCategory === FORM_CATEGORY_REVIEW ? [PURCHASED_ITEMS_CHOICE_QUESTION] : [],
+        ...this.formType === FORM_TYPE_PRODUCT && this.formCategory === FORM_CATEGORY_REVIEW ? [] : [],
         ...this.chosenOrderItems.length > 0 ? this.chosenOrderItems.reduce((acc, i2) => [
           ...acc,
           ...this.kickOffsAndFollowUps.map((q) => ({ ...q, order_item_id: i2 })),
@@ -27377,7 +27377,7 @@ const _sfc_main$7 = {
     }
   }
 };
-const _withScopeId$1 = (n2) => (pushScopeId("data-v-19e30577"), n2 = n2(), popScopeId(), n2);
+const _withScopeId$1 = (n2) => (pushScopeId("data-v-b4019c9c"), n2 = n2(), popScopeId(), n2);
 const _hoisted_1$7 = { class: "flex justify-between" };
 const _hoisted_2$4 = { class: "text-xl font-bold" };
 const _hoisted_3$3 = {
@@ -27440,7 +27440,7 @@ function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
     ], 6)
   ], 64);
 }
-var Form = /* @__PURE__ */ _export_sfc$1(_sfc_main$7, [["render", _sfc_render$7], ["__scopeId", "data-v-19e30577"]]);
+var Form = /* @__PURE__ */ _export_sfc$1(_sfc_main$7, [["render", _sfc_render$7], ["__scopeId", "data-v-b4019c9c"]]);
 const _sfc_main$6 = {
   name: "PreviewForm",
   components: {

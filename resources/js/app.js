@@ -6,6 +6,7 @@ require('./bootstrap')
 
 const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Ramaroo'
 const route = window.route
+window.Vapor = require('laravel-vapor')
 
 createInertiaApp({
   title: (title) => `${title} - ${appName}`,
