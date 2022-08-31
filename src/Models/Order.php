@@ -22,5 +22,9 @@ class Order extends Model
         return $this->belongsTo(Store::class);
     }
 
+    public function lineItems()
+    {
+        return $this->hasMany(OrderLineItem::class, 'external_id', 'external_id');
+    }
 
 }
