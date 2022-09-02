@@ -21,7 +21,7 @@ class FormRunnerController extends Controller
     public function show(Request $request, string $formUuid, string $orderUuid): \Inertia\Response
     {
         $form = Form::firstWhere('uuid', $formUuid);
-        $order = Order::with('store', 'lineItems')->firstWhere('uuid', $orderUuid);
+        $order = Order::with('store')->firstWhere('uuid', $orderUuid);
 
         if ($form === null || $order === null) {
             throw new ModelNotFoundException();
