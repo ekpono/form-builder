@@ -26,7 +26,7 @@ class FormAnswerController extends Controller
             )));
         }
 
-        $fa->update($data);
+        $fa->save($data);
 
         return new FormAnswerResource($fa);
     }
