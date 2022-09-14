@@ -77,7 +77,6 @@ class RamarooServiceProvider extends ServiceProvider
     {
         return [
             'namespace' => 'Shopceed\FormBuilder\Http\Controllers',
-            'middleware' => config('form-builder.middleware'),
         ];
     }
 
