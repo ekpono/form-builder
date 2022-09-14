@@ -71,6 +71,20 @@ class RamarooServiceProvider extends ServiceProvider
         ], function () {
             $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
         });
+
+        Route::group([
+            'namespace' => 'Shopceed\FormBuilder\Http\Controllers',
+            'middleware' => ['web', \Shopceed\FormBuilder\Http\Middleware\HandleInertiaRequests::class],
+        ], function () {
+            $this->loadRoutesFrom(__DIR__.'/../routes/guest.php');
+        });
+
+        Route::group([
+            'namespace' => 'Shopceed\FormBuilder\Http\Controllers',
+            'middleware' => ['web', \Shopceed\FormBuilder\Http\Middleware\HandleInertiaRequests::class],
+        ], function () {
+            $this->loadRoutesFrom(__DIR__.'/../routes/guestapi.php');
+        });
     }
 
     protected function routeConfiguration()
