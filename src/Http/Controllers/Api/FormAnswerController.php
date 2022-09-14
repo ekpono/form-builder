@@ -2,6 +2,7 @@
 
 namespace Shopceed\FormBuilder\Http\Controllers\Api;
 
+use Ramsey\Uuid\Uuid;
 use Shopceed\FormBuilder\Http\Controllers\Controller;
 use Shopceed\FormBuilder\Http\Requests\Form\FormAnswer\FormAnswerRequest;
 use Shopceed\FormBuilder\Http\Resources\FormAnswerResource;
@@ -15,20 +16,12 @@ class FormAnswerController extends Controller
     {
         $data = $request->validated();
 
-        $fa = FormAnswer::where('form_uuid', $formUuid)
-            ->where('order_uuid', $orderUuid)
-            ->first();
+        $response = FormAnswer::updateOrCreate(
+            ['form_uuid' => $formUuid, 'order_uuid' => $orderUuid],
+            ['answers' => $data['answers'], 'order_items' => $data['order_items'], 'params' => 'params']
+        );
 
-        if ($fa === null) {
-            return new FormAnswerResource(FormAnswer::create(array_merge(
-                ['form_uuid' => $formUuid, 'order_uuid' => $orderUuid],
-                $data
-            )));
-        }
-
-        $fa->save($data);
-
-        return new FormAnswerResource($fa);
+        return new FormAnswerResource($response);
     }
 
     /**
