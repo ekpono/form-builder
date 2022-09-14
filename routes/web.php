@@ -14,5 +14,6 @@ Route::get(config('form-builder.path').'/{form}', [FormBuilderController::class,
     ->middleware(config('form-builder.default_middleware'));
 
 Route::get(config('form-builder.path').'/form/{formUuid}/{orderUuid}', [FormRunnerController::class, 'show'])
-    ->name('form.show');
+    ->name('form.show')
+    ->middleware(config('form-builder.default_middleware'));
 
