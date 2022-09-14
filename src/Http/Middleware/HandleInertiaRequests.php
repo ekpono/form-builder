@@ -35,7 +35,7 @@ class HandleInertiaRequests extends Middleware
     {
         return array_merge(parent::share($request), [
             'auth' => [
-                'user' => $request->user(),
+                'user' => auth()->check() ? $request->user() : null,
             ],
             'path' => config('form-builder.path'),
             'config' => [

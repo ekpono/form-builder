@@ -9,6 +9,3 @@ use Shopceed\FormBuilder\Http\Controllers as RamarooControllers;
 
 // API Resources
 Route::apiResource('forms', RamarooControllers\Api\FormController::class);
-Route::post('form-answers/{formUuid}/{orderUuid}', [FormAnswerController::class, 'store'])
-    ->withoutMiddleware(config('form-builder.middleware'))
-    ->name('form-answers.store');
