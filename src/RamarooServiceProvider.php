@@ -71,20 +71,6 @@ class RamarooServiceProvider extends ServiceProvider
         ], function () {
             $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
         });
-
-        Route::group([
-            'namespace' => 'Shopceed\FormBuilder\Http\Controllers',
-            'prefix' => 'api/form-builder',
-            'as' => 'api.',
-        ], function () {
-            $this->loadRoutesFrom(__DIR__.'/../routes/guestapi.php');
-        });
-
-        Route::group([
-            'namespace' => 'Shopceed\FormBuilder\Http\Controllers',
-        ], function () {
-            $this->loadRoutesFrom(__DIR__.'/../routes/guest.php');
-        });
     }
 
     protected function routeConfiguration()
