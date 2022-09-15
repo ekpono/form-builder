@@ -16,10 +16,14 @@ class FormRunnerController extends Controller
      * @param  Request  $request
      * @param  string  $formUuid
      * @param  string  $orderUuid
-     * @return \Inertia\Response
      */
-    public function show(Request $request, string $formUuid, string $orderUuid): \Inertia\Response
+    public function show(Request $request, string $formUuid, string $orderUuid)
     {
+        // Redirect to preview mode
+        if ($orderUuid === "{{current_order_id}}") {
+            return $this->redirectToPreviewMode($formUuid);
+        }
+
         $form = Form::firstWhere('uuid', $formUuid);
         $order = Order::with('store')->firstWhere('uuid', $orderUuid);
 
@@ -46,5 +50,12 @@ class FormRunnerController extends Controller
                     ->first(),
             ]
         );
+    }
+
+    private function redirectToPreviewMode($formUuid)
+    {
+        $form = Form::where('uuid', $formUuid)->first();
+
+        return redirect(config('form-builder.path').'/'.$form->id .'?mode=preview');
     }
 }
