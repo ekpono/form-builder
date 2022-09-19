@@ -7394,9 +7394,9 @@ const _sfc_main$18 = {
   data: function() {
     return {
       tags: Object.freeze({
-        Contact: ["email", "phone"],
-        Personal: ["first_name", "last_name"],
-        Purchase: ["product_name", "price", "total_price"]
+        Contact: ["customer.email", "customer.phone"],
+        Personal: ["customer.first_name", "customer.last_name", "customer.full_name"],
+        Purchase: ["order.total_price", "order.number", "order.line_items_count", "products.name"]
       })
     };
   }
