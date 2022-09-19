@@ -80,6 +80,7 @@ class FormRunnerController extends Controller
                 'last_name' => $this->getVariableValue('customer.last_name'),
                 'full_name' => $this->getVariableValue('customer.full_name'),
                 'email' => $this->getVariableValue('customer.email'),
+                'phone' => $this->getVariableValue('customer.phone'),
             ],
             'order' => [
                 'total_price' => $this->getVariableValue('total_price'),
