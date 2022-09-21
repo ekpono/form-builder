@@ -2,6 +2,7 @@
 
 namespace Shopceed\FormBuilder\Http\Controllers\Pages;
 
+use App\Models\Invitation;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
@@ -39,6 +40,8 @@ class FormRunnerController extends Controller
 
         $form->data = $this->assignMergeTags($form, $order);
 
+        $this->updateHasOpenedOnInvitiation($order);
+
         return Inertia::render(
             'FormRunner/Form',
             [
@@ -60,6 +63,16 @@ class FormRunnerController extends Controller
         );
     }
 
+    public function updateHasOpenedOnInvitiation($order)
+    {
+        $invitation = Invitation::where('order_id', $order->id)->where('has_engaged', false)->first();
+
+        if ($invitation) {
+            $invitation->update([
+                'has_opened' => true
+            ]);
+        }
+    }
     private function redirectToPreviewMode($formUuid)
     {
         $form = Form::where('uuid', $formUuid)->first();

@@ -2,13 +2,12 @@
 
 namespace Shopceed\FormBuilder\Http\Controllers\Api;
 
-use Ramsey\Uuid\Uuid;
+use App\Models\Invitation;
+use App\Models\Order;
 use Shopceed\FormBuilder\Http\Controllers\Controller;
 use Shopceed\FormBuilder\Http\Requests\Form\FormAnswer\FormAnswerRequest;
 use Shopceed\FormBuilder\Http\Resources\FormAnswerResource;
-use Shopceed\FormBuilder\Models\Form;
 use Shopceed\FormBuilder\Models\FormAnswer;
-use Illuminate\Foundation\Http\FormRequest;
 
 class FormAnswerController extends Controller
 {
@@ -16,25 +15,44 @@ class FormAnswerController extends Controller
     {
         $data = $request->validated();
 
+        $this->updateHasEngagedStatus($data, $orderUuid);
+
         $response = FormAnswer::updateOrCreate(
             ['form_uuid' => $formUuid, 'order_uuid' => $orderUuid],
-            ['answers' => $data['answers'], 'order_items' => $data['order_items'], 'params' => 'params']
+            ['answers' => $data['answers'], 'order_items' => $data['order_items'], 'params' => 'params', 'finished_at' => isset($data['finished_at']) ? $data['finished_at'] : null]
         );
 
         return new FormAnswerResource($response);
     }
 
     /**
-     * TODO remove on prod it's just for testing
+     * If this is the first time an api call is made on the form
+     * update the has_engaged column 😊
      *
-     * @param  FormRequest  $request
-     * @param  Form  $form
-     * @return \Illuminate\Http\JsonResponse
+     * @param $data
+     * @param $orderUuid
      */
-    public function deleteAll(Form $form)
+    public function updateHasEngagedStatus($data, $orderUuid)
     {
-        FormAnswer::where('form_uuid', $form->uuid)->delete();
+        if ($this->isFirstAnswer($data)) {
+            $order = Order::where('uuid', $orderUuid)->first();
 
-        return response()->json('OK');
+            $invitation = Invitation::where('order_id', $order->id)->first();
+
+            if ($invitation) {
+                $invitation->update([
+                    'has_engaged' => true
+                ]);
+            }
+        }
+    }
+
+    /**
+     * @param $data
+     * @return bool
+     */
+    protected function isFirstAnswer($data): bool
+    {
+        return isset($data['answers']) && count($data['answers']) === 1;
     }
 }

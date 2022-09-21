@@ -27,6 +27,7 @@ class FormAnswerRequest extends FormRequest
             'answers' => ['required', 'array'],
             'order_items' => ['array'],
             'params' => [],
+            'finished_at' => ['nullable', 'date'],
         ];
     }
 }
