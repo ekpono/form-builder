@@ -5,6 +5,7 @@ namespace Shopceed\FormBuilder\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Storage;
 use Shopceed\FormBuilder\Events\StoreCreated;
 
 /**
@@ -22,8 +23,22 @@ class Store extends Model
 
     protected $casts = ['settings' => 'array'];
 
+    protected $appends = ['brand_logo'];
+
     public function orders()
     {
         return $this->hasMany(Store::class);
+    }
+
+    public function getBrandLogoAttribute()
+    {
+        $logo = File::where(['catalog' => 'brand_logo', 'store_id' => $this->id])
+            ->first();
+
+        if ($logo) {
+            return Storage::disk('s3')->url($logo->path);
+        }
+
+        return null;
     }
 }
